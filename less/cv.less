@@ -1,0 +1,33 @@
+.cv {
+	.skills {
+		ul {
+			width:45%;
+			float:left;
+			margin:0;
+		}
+	}
+	h4, h5, h6 {
+		font-family:@font-type-base;
+		margin-top:0;
+		margin-bottom:0;
+	}
+	h4 {
+		.type-margin-top(40px);
+		font-weight:bold;
+
+		&:first-child {
+			margin-top:0;
+		}
+	}
+	h6 {
+		color:lighten(@type-color, 20%);
+		.type-size(15px);
+		.type-line-height(21px);
+	}
+	p {
+		.type-margin-top(13px);
+		.type-margin-bottom(13px);
+		.type-line-height(24px);
+	}
+
+}

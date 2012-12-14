@@ -1,0 +1,32 @@
+// less/header.less
+
+.header {
+	.drop-shadow(0, 4px, 4px, 0.1);
+
+	.title{
+		position:relative;
+		.inline-block;
+	}
+	.social-networks {
+		float:right;
+	}
+	a {
+		color:@type-color;
+
+		&:hover {
+			text-decoration:none;
+		}
+	}
+	h1 {
+		.type-size(66px);
+		text-transform: lowercase;
+		padding-bottom:20px;
+	}
+	h2 {
+		font-family:@font-type-base;
+		.type-size(26px);
+		position:absolute;
+		right:-10px;
+		top:44px;
+	}
+}
