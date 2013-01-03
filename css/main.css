@@ -836,10 +836,10 @@ textarea {
 }
 .header h2 {
   font-family: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 26px;
-  font-size: 2.6rem;
+  font-size: 25px;
+  font-size: 2.5rem;
   position: absolute;
-  right: -16px;
+  right: -15px;
   top: 44px;
 }
 .recent-work {
@@ -1089,10 +1089,10 @@ textarea {
 }
 @media (max-width: 480px) {
   body {
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 21px;
-    line-height: 2.1rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
   }
   .header h1 {
     font-size: 52px;
@@ -1101,9 +1101,9 @@ textarea {
     padding-bottom: 10px;
   }
   .header h2 {
-    font-size: 21px;
-    font-size: 2.1rem;
-    right: -10px;
+    font-size: 20px;
+    font-size: 2rem;
+    right: -8px;
     top: 20px;
     margin-bottom: 0;
   }
@@ -1204,10 +1204,10 @@ textarea {
     padding-bottom: 10px;
   }
   .header h2 {
-    font-size: 17px;
-    font-size: 1.7rem;
-    right: -3px;
-    top: 14px;
+    font-size: 15px;
+    font-size: 1.5rem;
+    right: -2px;
+    top: 12px;
     margin-bottom: 0;
   }
   .header .social-networks {
