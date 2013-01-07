@@ -1,5 +1,8 @@
 ﻿$(document).ready(function(){
 
+	// Remove no-javascript class if js is enabled
+	$("body").removeClass("no-javascript")
+
 	// form validation
 	$("[data-role='contact-form']").validate();
 
