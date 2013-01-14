@@ -31,9 +31,10 @@
 
 	<!-- favicon and shortcut icons for mobile devices. -->
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png" />
+	<link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icon-ipad.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icon-iphone4.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="touch-icon-retina.png" />
 
 </head>
 <body class="no-javascript">
@@ -83,11 +84,11 @@
 					<li class="article">
 						<article>
 							<a target="_blank" href="http://www.300notes.com">
-								<span class="figure">
-									<figure>
-										<img alt="300notes website image" src="img/300notes.jpg" />
-									</figure>
-								</span>
+								<figure>
+									<span class="figure">
+											<img alt="300notes website image" src="img/300notes.jpg" />
+									</span>
+								</figure>
 								<div class="details"><span class="not-link">Design, HTML, LESS, jQuery</span>
 									www.300notes.com
 								</div>
@@ -97,11 +98,11 @@
 					<li class="article last">
 						<article>
 							<a target="_blank" href="http://www.boughtbymany.com">
-								<span class="figure">
-									<figure>
-										<img alt="BoughtByMany website image" src="img/boughtbymany.jpg" />
-									</figure>
-								</span>
+								<figure>
+									<span class="figure">
+											<img alt="BoughtByMany website image" src="img/boughtbymany.jpg" />
+									</span>
+								</figure>
 								<div class="details"><span class="not-link">HTML, LESS, jQuery</span>
 									www.boughtbymany.com
 								</div>
@@ -128,11 +129,11 @@
 						<li class="article">
 						<article>
 							<a target="_blank" href="http://www.bravenewtalent.com">
-								<span class="figure">
-									<figure>
+								<figure>
+									<span class="figure">
 										<img alt="BraveNewTalent website image" src="img/bravenewtalent.jpg" />
-									</figure>
-								</span>
+									</span>
+								</figure>
 								<div class="details"><span class="not-link">HTML, LESS, jQuery</span>
 									www.bravenewtalent.com
 								</div>
@@ -141,44 +142,44 @@
 					</li>
 						<li class="article last">
 							<a target="_blank" href="http://www.mytrainticket.co.uk">
-								<span class="figure">
-									<figure>
+								<figure>
+									<span class="figure">
 										<img alt="Mytraincticket website image" src="img/mytrainticket.jpg" />
-									</figure>
-								</span>
+									</span>
+								</figure>
 								<div class="details"><span class="not-link">HTML, XSLT, Sass, jQuery</span>
 								www.mytrainticket.co.uk</div>
 							</a>
 						</li>
 						<li class="article">
 							<a target="_blank" href="http://www.nicolaveal.co.uk">
-								<span class="figure">
-									<figure>
+								<figure>
+									<span class="figure">
 										<img alt="Nicola Veal website image" src="img/nicolaveal.jpg" />
-									</figure>
-								</span>
+									</span>
+								</figure>
 								<div class="details"><span class="not-link">Design, HTML, CSS, jQuery</span>
 								www.nicolaveal.co.uk</div>
 							</a>
 						</li>
 						<li class="article last">
 							<a target="_blank" href="http://www.action-paintball.co.uk">
-								<span class="figure">
-									<figure>
+								<figure>
+									<span class="figure">
 										<img alt="Action Paintball website image" src="img/action-paintball.jpg" />
-									</figure>
-								</span>
+									</span>
+								</figure>
 								<div class="details"><span class="not-link">HTML, CSS, jQuery</span>
 								www.action-paintball.co.uk</div>
 							</a>
 						</li>
 						<li class="article">
 							<a target="_blank" href="http://www.digital-zen.co.uk">
-								<span class="figure">
-									<figure>
+								<figure>
+									<span class="figure">
 										<img alt="Digital Zen website image" src="img/digital-zen.jpg" />
-									</figure>
-								</span>
+									</span>
+								</figure>
 								<div class="details"><span class="not-link">HTML, CSS, jQuery</span>
 								www.digital-zen.com</div>
 							</a>
@@ -219,7 +220,7 @@
 
 		                <div>
 		                    <label for="cwebsite">Website</label>
-		                    <input type="url" class="web" id="cweb" placeholder="Web address (e.g. www.phwebs.co.uk)" name="web">
+		                    <input type="url" class="web" id="cwebsite" placeholder="Web address (e.g. www.phwebs.co.uk)" name="web">
 						</div>
 
 		                <div>
@@ -230,7 +231,7 @@
 	                		<input class="button" type="submit" value="Submit" id="submit"/>
 	                	</div>
 	                	<div class="blankinfo">
-	                		<input type="text" placeholder="Leave this blank" alt="Form will not submit with this filled in! Leave blank" id="blankinfo" name="blankinfo">
+	                		<input type="text" placeholder="Leave this blank or your form will not be submitted!" id="blankinfo" name="blankinfo">
 	                	</div>
 	                </fieldset>
 				</form>
@@ -282,8 +283,8 @@
 
 	<!-- Javascript loveliness. -->
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="js/script.js" ></script>
-	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/script.min.js" ></script>
+	<script type="text/javascript" src="js/validate.min.js"></script>
 
 </body>
 </html>
