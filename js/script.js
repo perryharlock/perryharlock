@@ -3,13 +3,6 @@
 	// Remove no-javascript class if js is enabled
 	$("body").removeClass("no-javascript")
 
-	// Honeypot spambot detection and submit suppression
-	$("[data-role='contact-form']").submit(function(event) {
-		if($("#blankinfo").val()!=""){
-			event.preventDefault();
-		}
-	});
-
 	// form validation
 	$("[data-role='contact-form']").validate();
 
