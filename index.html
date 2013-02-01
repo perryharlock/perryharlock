@@ -197,10 +197,11 @@
 			</div>
 
 			<div class="col-7 col-tablet-12">
-				<form role="form" method="post" action="http://www.phwebs.co.uk/formmail/formmail.php" id="contactForm" data-role="contact-form">
-				 	<input type="hidden" name="recipients" value="enquiries@phwebs.co.uk" />
-				 	<input type="hidden" name="subject" value="Web Enquiry" />
-                    <input type="hidden" name="good_template" value="thanks.html" />
+					<form role="form" method="post" action="formmail/formmail.pl" id="contactForm" data-role="contact-form">
+					<input type="hidden" name="recipient" value="enquiries@phwebs.co.uk" />
+                    <input type="hidden" name="subject" value="Web Enquiry" />
+                    <input type="hidden" name="redirect" value="http://www.phwebs.co.uk/thanks.html" />
+                    
 					<fieldset>
 						<div>
 							<label for="cname">Name <span>*</span></label>
