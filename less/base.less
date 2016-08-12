@@ -20,8 +20,8 @@ body {
 	margin:0 auto;
 }
 p {
-    .type-margin-top(26px);
-    .type-margin-bottom(26px);
+    .type-margin-top(26);
+    .type-margin-bottom(26);
 }
 ol p, ul p, dl p {
 	margin-top:0;
@@ -30,8 +30,8 @@ ol p, ul p, dl p {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .h6, h6,
 {
-	.type-margin-top(20px);
-	.type-margin-bottom(20px);
+	.type-margin-top(20);
+	.type-margin-bottom(20);
   font-family:@font-type-title;
 }
 h1, .h1	{
@@ -46,8 +46,8 @@ h2, .h2	{
 h3, .h3	{
    	.type-size(36);
    	.type-line-height(54);
-    .type-margin-bottom(40px);
-    .type-margin-top(40px);
+    .type-margin-bottom(40);
+    .type-margin-top(40);
     border-bottom:solid 1px @border-color;
     padding-bottom:10px;
 }
@@ -76,7 +76,7 @@ strong {
   color:@strong-color;
 }
 small, sub, sup {
-  .type-size(14px);
+  .type-size(14);
 }
 mark {
   background-color:@mark-color;
@@ -167,8 +167,8 @@ th {
 ul, ol {
     margin-left:0;
     padding-left:26px;
-    .type-margin-top(20px);
-    .type-margin-bottom(20px);
+    .type-margin-top(20);
+    .type-margin-bottom(20);
 
 	ul, ol, p {
 		margin-top:0;
@@ -198,7 +198,7 @@ dt {
 }
 dd {
 	padding-left:20px;
-	.type-margin-bottom(16px);
+	.type-margin-bottom(16);
 	margin-left:0;
 }
 
@@ -206,10 +206,10 @@ dd {
 // forms
 label {
   display:block;
-  .type-margin-top(20px);
+  .type-margin-top(20);
   font-family:@font-type-title;
-  .type-size(24px);
-  .type-line-height(36px);
+  .type-size(24);
+  .type-line-height(36);
 
   span {
     color:@error-color;
@@ -229,7 +229,7 @@ textarea {
   border:1px solid @input-border;
   color:lighten(@type-color,20%);
   font-family:@font-type-base;
-  .type-size(14px);
+  .type-size(14);
   .transition();
 }
 
@@ -238,7 +238,7 @@ span.error {
   font-family:@font-type-base;
   color:@error-color;
   margin-top:0;
-  .type-size(15px);
+  .type-size(15);
   font-style:italic;
   .transition();
 }
@@ -296,12 +296,12 @@ textarea {
 
 .trigger {
   color:@type-color;
-  .type-size(16px);
+  .type-size(16);
   vertical-align:middle;
   background:transparent url("../img/style/more-or-less.png") no-repeat right -40px;
   padding-right:24px;
   .inline-block;
-  .type-margin-bottom(24px);
+  .type-margin-bottom(24);
 
   &.is-open {
     background:transparent url("../img/style/more-or-less.png") no-repeat right 11px;
@@ -310,5 +310,5 @@ textarea {
 }
 
 .massive-margin {
-  .type-margin-bottom(500px);
+  .type-margin-bottom(500);
 }
