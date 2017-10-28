@@ -1,14 +1,12 @@
 .contact-form {
-	
-	form {
-		border-right:solid 1px lighten(@border-color,20%);
-	}
+	text-align: center;
 
 	.contact-details {
 		font-family:@font-type-title;
 		.type-size(34);
 		.type-line-height(51);
 		text-align:center;
+		.type-margin-bottom(25);
 
 		p {
 			margin-top:0;
@@ -21,6 +19,16 @@
 				.type-margin-top(25);
 				.type-margin-bottom(-30);
 			}
+		}
+	}
+
+	.offset {
+		margin-left: 25%;
+	}
+
+	.offset {
+		@media (max-width: @frag-break-tablet-portrait) {
+			margin-left: 0;
 		}
 	}
 }

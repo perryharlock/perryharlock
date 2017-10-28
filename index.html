@@ -190,48 +190,10 @@
 
 	<div id="contact-form" class="contact-form decorated-section">
 		<div class="grid">
-			<div class="col-12">
+			<div class="col-6 col-tablet-12 offset">
 				<h3>Get in touch</h3>
 			</div>
-
-			<div class="col-7 col-tablet-12">
-					<form role="form" method="post" action="formmail/formmail.pl" id="contactForm" data-role="contact-form">
-					<input type="hidden" name="recipient" value="enquiries@phwebs.co.uk" />
-                    <input type="hidden" name="subject" value="Web Enquiry" />
-                    <input type="hidden" name="redirect" value="http://www.phwebs.co.uk/thanks.html" />
-
-					<fieldset>
-						<div>
-							<label for="cname">Name <span>*</span></label>
-		                    <input type="text" required="required" placeholder="Type your name" class="required name" id="cname" name="name">
-		                </div>
-
-		                <div>
-		                    <label for="ctelephone">Telephone <span>*</span></label>
-		                    <input type="tel" required="required" placeholder="Type your telephone number" class="required telephone" id="ctelephone" name="telephone">
-						</div>
-
-		                <div>
-		                    <label for="cemail">Email <span>*</span></label>
-		                    <input type="email" required="required" placeholder="Type your email address" class="required email" id="cemail" name="email">
-						</div>
-
-		                <div>
-		                    <label for="cwebsite">Website</label>
-		                    <input type="url" class="web" id="cwebsite" placeholder="Web address (e.g. www.phwebs.co.uk)" name="web">
-						</div>
-
-		                <div>
-		                    <label for="cmessage">Message</label>
-		                    <textarea id="cmessage" placeholder="Tell me something" name="message" cols="31" rows="8"></textarea>
-		                </div>
-		                <div class="button-container clearfix">
-	                		<input class="button" type="submit" value="Submit" id="submit"/>
-	                	</div>
-	                </fieldset>
-				</form>
-			</div>
-			<div class="col-5 contact-details col-tablet-12">
+			<div class="col-6 col-tablet-12 offset contact-details">
 				<p class="separator">call me on<br/> 07876 572123</p>
 
 				<p class="separator">email me at<br/> <a href="mailto:perry@phwebs.co.uk" title="Email me">perry@phwebs.co.uk</a></p>
@@ -279,7 +241,6 @@
 	<!-- Javascript loveliness. -->
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript" src="js/script.min.js" ></script>
-	<script type="text/javascript" src="js/validate.min.js"></script>
 
 </body>
 </html>

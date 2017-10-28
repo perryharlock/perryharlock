@@ -3,9 +3,6 @@
 	// Remove no-javascript class if js is enabled
 	$("body").removeClass("no-javascript");
 
-	// form validation
-	$("[data-role='contact-form']").validate();
-
 	// Function to animate sections
 	var animateSection = function(sectionName, offset){
 		$('html,body').animate({
