@@ -8,7 +8,7 @@ deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: www.example-123.org
+  bucket: www.perryharlock.co.uk
   local-dir: ./
   skip_cleanup: true
   region: eu-west-2
