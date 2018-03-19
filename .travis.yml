@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- 9
+install:
+  - pip install --user awscli
+script: exit 0
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: www.example-123.org
+  local-dir: ./
+  skip_cleanup: true
+  region: eu-west-2
+  on:
+    branch: master
