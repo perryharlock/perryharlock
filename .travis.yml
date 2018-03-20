@@ -9,7 +9,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: www.perryharlock.co.uk
-  local-dir: ./
+  local-dir: .
   skip_cleanup: true
   region: eu-west-2
   on:
