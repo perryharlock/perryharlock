@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.phwebs.co.uk/</loc>
+    <loc>http://www.perryharlock.co.uk/</loc>
     <lastmod>2017-10-28</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.phwebs.co.uk/index.html</loc>
+    <loc>http://www.perryharlock.co.uk/index.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.phwebs.co.uk/cv.html</loc>
+    <loc>http://www.perryharlock.co.uk/cv.html</loc>
     <priority>0.9</priority>
   </url>
 </urlset>
