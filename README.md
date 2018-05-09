@@ -1,14 +1,25 @@
 perryharlock
 ============
 
-A copy of my portfolio site www.perryharlock.co.uk  
-(redirected from phwebs.co.uk)
+A copy of my portfolio site https://perryharlock.co.uk  
 
-To run the site locally:
+The npm install will install grunt, autoprefixer, uglify, http-server..and much much more!  
 
-```
-npm install
-npm start
-```  
+Grunt will monitor less and js files and compile and minify them when they change as well as on initial run.
 
-Then go to http://localhost:8080/
+1 Install:  
+`npm install`
+
+2 Monitor files and start http-server  
+`npm start`  
+
+Go to http://localhost:8080/
+
+
+NOTE
+====
+
+- Minimal version bootstrap with grid, utilities, responsive utilities and scaffolding
+- Using 24 column bootstrap grid
+- Larger screen breakpoint added for grid at 1310px
+- All Less/CSS is prefixed and minimised on compilation
