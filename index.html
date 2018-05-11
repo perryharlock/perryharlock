@@ -7,18 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio of Perry Harlock, UI Developer / Designer in Kent</title>
+    <meta name="description" content = "Online portfolio of Perry Harlock, a kent based UI Developer / Designer" />
+    <meta name="keywords" content="web development, web developer, ui designer, ui developer, london"/>
 
     <meta property="og:title" content="Perry Harlock - UI Developer / Designer" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://www.perryharlock.co.uk" />
 	<meta property="og:image" content="https://www.perryharlock.co.uk/img/perry.svg" />
 
-    <meta name="description" content = "Online portfolio of Perry Harlock, a kent based UI Developer / Designer" />
-	<meta name="keywords" content="web development, web developer, ui designer, ui developer, london"/>
-	<meta name="google-site-verification" content="aPkK8uKcFnWxU-hvl-BM8QBPrJNFDYTWLM70o2JTNLk" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="Perry Harlock"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="img/mstile-144x144.png" />
 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
 
+    <meta name="google-site-verification" content="aPkK8uKcFnWxU-hvl-BM8QBPrJNFDYTWLM70o2JTNLk" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7022452-13"></script>
 	<script>
@@ -32,19 +44,19 @@
 </head>
 <body class="no-javascript">
     <div class="max">
-        <div class="grunge">
-        	<header class="header">
+        <div class="hero__container">
+            <header class="header">
                 <a href="/" class="logo">
                     <img src="/img/logo.svg" alt="Perry Harlock logo" />
                 </a>
 
                 <nav class="nav">
-                    <ul class="nav__list">
+                    <ul class="nav__list list-inline">
                         <li class="nav__item">
                             <a class="nav__link font-semi" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link font-semi" href="#portfolio">Skills</a>
+                            <a class="nav__link font-semi" href="#skills">Skills</a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__link font-semi" href="#contact">Contact</a>
@@ -56,10 +68,10 @@
             <section class="hero">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-md-offset-1">
+                        <div class="col-sm-22 col-md-18 col-lg-14 col-lg-offset-1">
                             <h1 class="hero__heading font-bold">Hi, I'm <span class="highlight">Perry</span></h1>
 
-                            <h2 class="hero__sub-heading font-semi">I‘m a <span class="highlight">UI Developer / Designer</span> working in London.  <br/>I <span class="highlight">design</span> and <span class="highlight">develop</span> for web / apps and specialise in <span class="highlight">CSS</span>, <span class="highlight">HTML</span> and <span class="highlight">Responsive Design.</span> <br/></br>Did I mention I love <span class="highlight">CSS</span>?</h2>
+                            <h2 class="hero__sub-heading font-semi">I‘m a <span class="highlight">UI Developer / Designer</span> working in London.  I <span class="highlight">design</span> and <span class="highlight">develop</span> for web / apps and specialise in <span class="highlight">CSS</span>, <span class="highlight">HTML</span> and <span class="highlight">Responsive Design.</span> <br/></br>Did I mention I love <span class="highlight">CSS</span>?</h2>
                         </div>
                     </div>
                 </div>
@@ -67,102 +79,159 @@
                 <figure class="hero__image">
                     <img class="img-responsive" src="img/perry.svg" alt="Photo of Perry Harlock"/>
                 </figure>
+
+                <a href="#portfolio" class="scroll page-scroll hidden-xs">
+                    <span class="sr-only">Click to jump to the portfolio section</span>
+                </a>
             </section>
         </div>
 
-    	<section>
-            <h3>Portfolio</h3>
+    	<section class="portfolio" id="portfolio">
+            <h3 class="section__title">Portfolio</h3>
 
-            <ul>
-                <li class="portfolio-item">
-                    <h3>Digital Zen</h3>
-                    <p>Front end build</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>LESS</li>
-                        <li>Responsive</li>
-                        <li>Photoshop</li>
-                        <li>Sketch</li>
-                    </ul>
-                    <img src="" />
+            <ul class="list-unstyled">
+                <li class="portfolio__item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-md-push-12 col-lg-10 col-lg-offset-1 col-lg-push-13">
+                                <h3 class="portfolio__title font-bold">Digital Zen</h3>
+                                <p class="portfolio__desc">Front end build</p>
+                                <a class="portfolio__link" href="http://www.digital-zen.co.uk" target="_blank">Visit site</a>
+                                <ul class="portfolio__skills list-unstyled">
+                                    <li>HTML / CSS / LESS</li>
+                                    <li>Responsive</li>
+                                    <li>Photoshop / Sketch</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 col-md-pull-12 col-lg-12 col-lg-offset-1 col-lg-pull-11">
+                                <img class="img-responsive" src="img/digital-zen.png" alt="Digital Zen screenshot on laptop and phone" />
+                            </div>
+                        </div>
+                    </div>
                 </li>
 
-                <li class="portfolio-item">
-                    <h3>Assertis</h3>
-                    <p>Front end build / design</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>LESS</li>
-                        <li>JS</li>
-                        <li>jQuery</li>
-                        <li>Responsive</li>
-                        <li>Photoshop</li>
-                        <li>Sketch</li>
-                    </ul>
-                    <img src="" />
+                <li class="portfolio__item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-10">
+                                <h3 class="portfolio__title font-bold">Assertis</h3>
+                                <p class="portfolio__desc">Front end build / design</p>
+                                <a class="portfolio__link" href="https://www.assertis.co.uk" target="_blank">Visit site</a>
+                                <ul class="portfolio__skills list-unstyled">
+                                    <li>HTML / CSS / LESS</li>
+                                    <li>JS / jQuery</li>
+                                    <li>Responsive</li>
+                                    <li>Photoshop / Sketch</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 col-lg-11 col-lg-offset-1">
+                                <img class="img-responsive" src="img/assertis.png" alt="Assertis screenshot on laptop" />
+                            </div>
+                        </div>
+                    </div>
                 </li>
 
-                <li class="portfolio-item">
-                    <h3>Planar Network</h3>
-                    <p>Front end build</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>LESS</li>
-                        <li>JS</li>
-                        <li>jQuery</li>
-                        <li>Responsive</li>
-                        <li>Photoshop</li>
-                        <li>Sketch</li>
-                    </ul>
-                    <img src="" />
+                <li class="portfolio__item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-md-push-12 col-lg-10 col-lg-offset-1 col-lg-push-13">
+                                <h3 class="portfolio__title font-bold">Planar Network</h3>
+                                <p class="portfolio__desc">Front end build</p>
+                                <a class="portfolio__link" href="https://planar.network" target="_blank">Visit site</a>
+                                <ul class="portfolio__skills list-unstyled">
+                                    <li>HTML / CSS / LESS</li>
+                                    <li>JS / jQuery</li>
+                                    <li>Responsive</li>
+                                    <li>Photoshop / Sketch</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 col-md-pull-12 col-lg-12 col-lg-offset-1 col-lg-pull-11">
+                                <img class="img-responsive" src="img/planar-network.png" alt="Planar Network screenshot on tablet and phone" />
+                            </div>
+                        </div>
+                    </div>
                 </li>
 
-                <li class="portfolio-item">
-                    <h3>Cloak</h3>
-                    <p>Front end build</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>LESS</li>
-                        <li>JS</li>
-                        <li>jQuery</li>
-                        <li>Responsive</li>
-                        <li>Photoshop</li>
-                        <li>Sketch</li>
-                    </ul>
-                    <img src="" />
+                <li class="portfolio__item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-10">
+                                <h3 class="portfolio__title font-bold">Cloak</h3>
+                                <p class="portfolio__desc">Front end build</p>
+                                <a class="portfolio__link" href="http://www.cloakcoin.com" target="_blank">Visit site</a>
+                                <ul class="portfolio__skills list-unstyled">
+                                    <li>HTML / CSS / LESS</li>
+                                    <li>JS / jQuery</li>
+                                    <li>Responsive</li>
+                                    <li>Photoshop / Sketch</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 col-lg-11 col-lg-offset-1 ">
+                                <img class="img-responsive" src="img/cloak.png" alt="Cloak screenshot on laptop" />
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
     	</section>
 
-        <section class="skills">
-            <h3>Skills</h3>
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-24">
+                        <h3 class="section__title">Skills</h3>
 
-            <ul>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>jQuery</li>
-                <li>Photoshop</li>
-                <li>Sketch</li>
-            </ul>
+                        <ul class="skills__list list-unstyled">
+                            <li class="skills__bar">
+                                <span class="skills__label">CSS</span>
+                            </li>
+                            <li class="skills__bar">
+                                <span class="skills__label">HTML</span>
+                            </li>
+                            <li class="skills__bar">
+                                <span class="skills__label">
+                                    <span class="hidden-xs">Photoshop</span>
+                                    <span class="visible-xs" title="Photoshop">PS</span>
+                                </span>
+                            </li>
+                            <li class="skills__bar">
+                                <span class="skills__label">Sketch</span>
+                            </li>
+                            <li class="skills__bar hidden-xs">
+                                <span class="skills__label">Git</span>
+                            </li>                            
+                            <li class="skills__bar">
+                                <span class="skills__label">
+                                    <span class="hidden-xs">jQuery/</span>JS
+                                </span>
+                            </li>
+                        </ul>
+
+                        <p class="text-center">These are my most commonly utilised skills on a daily basis. <br/>Check out <a rel="me" target="_blank" href="https://uk.linkedin.com/pub/perry-harlock/12/1b7/170" title="Find out about me on LinkedIn">LinkedIn</a> for more.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-    	<footer>
-    		<ul class="nav social-networks">
-                <li>
-                    <a rel="me" target="_blank" class="twitter" href="https://twitter.com/perryharlock" title="Follow me on twitter">Twitter</a>
-                </li>
-                <li>
-                    <a rel="me" target="_blank" class="linkedin" href="https://uk.linkedin.com/pub/perry-harlock/12/1b7/170" title="Find out about me on LinkedIn">LinkedIn</a>
-                </li>
-                <li>
-                    <a rel="me" target="_blank" class="github" href="https://github.com/perryharlock" title="Check me out on GitHub">GitHub</a>
-                </li>
-            </ul>
-            <small>© copyright perry harlock, 2018 </small>
+    	<footer class="footer" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-24">
+                		<ul class="list-inline social-networks">
+                            <li>
+                                <a rel="me" target="_blank" class="twitter" href="https://twitter.com/perryharlock" title="Follow me on twitter">Twitter</a>
+                            </li>
+                            <li>
+                                <a rel="me" target="_blank" class="linkedin" href="https://uk.linkedin.com/pub/perry-harlock/12/1b7/170" title="Find out about me on LinkedIn">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a rel="me" target="_blank" class="github" href="https://github.com/perryharlock" title="Check me out on GitHub">GitHub</a>
+                            </li>
+                        </ul>
+                        <div class="text-center">&copy; Perry Harlock, 2018</div>
+                    </div>
+                </div>
+            </div>
     	</footer>
     </div>
 

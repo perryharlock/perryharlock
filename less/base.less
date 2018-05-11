@@ -4,12 +4,17 @@ body {
     font-family: @font-type;
     color: @color-font;
     background: @bg-color-1;
-    font-size: 16px;
-    line-height: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.8;
+
+    @media @screen-tablet {
+        line-height: 1.6;
+    }
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, .header {
-    .font-bold;
+    font-weight: 700;
 }
 
 @media (min-width: 1310px) {
@@ -18,18 +23,24 @@ body {
     }
 }
 
+a {
+    color: @color-font;
+    text-decoration: underline;
+
+    &:hover, &:active, &:focus {
+        color: darken(@color-font, 10%);
+    }
+}
+
 .font-bold {
-    font-family: @font-header;
     font-weight: 700;
 }
 
 .font-semi {
-    font-family: @font-semi;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .font-regular {
-    font-family: @font-type;
     font-weight: 400;
 }
 
@@ -38,18 +49,12 @@ body {
     margin: 0 auto;
 }
 
-.grunge {
-    background: @color-primary url(@grunge) no-repeat left top;
-    background-size: cover;
-    height: 600px;
-    overflow: hidden;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+.text-right {
+    text-align: right;
+}
 
-    @media @screen-tablet {
-        height: 875px;
-        clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-    }
+.text-center {
+    text-align: center;
 }
 
 .highlight {
@@ -73,27 +78,4 @@ body {
     padding-left: 5px;
     padding-right: 5px;
   }
-}
-
-/* Small devices (tablets, 768px and up) */
-@media @screen-tablet {
-    body {
-        font-size: 18px;
-        line-height: 34px
-    }
-}
-
-/* Small laptops (laptops, 992px and up) */
-@media @screen-laptop {
-
-}
-
-/* Desktop devices (desktops, 1200px and up) */
-@media @screen-desktop {
-
-}
-
-/* Large Desktop devices (large desktops, 1480px and up) */
-@media @screen-desktop-lg {
-
 }

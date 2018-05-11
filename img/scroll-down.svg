@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="44px" viewBox="0 0 28 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>scroll-down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="scroll-down" fill="#F0DF22" fill-rule="nonzero">
+            <path d="M14,4 C19.5,4 24,8.5 24,14 L24,30 C24,35.5 19.5,40 14,40 C8.5,40 4,35.5 4,30 L4,14 C4,8.5 8.5,4 14,4 Z M14,0 C6.3,0 0,6.3 0,14 L0,30 C0,37.7 6.3,44 14,44 C21.7,44 28,37.7 28,30 L28,14 C28,6.3 21.7,0 14,0 Z" id="Shape"></path>
+            <path d="M14,17 C12.9,17 12,16.1 12,15 L12,10 C12,8.9 12.9,8 14,8 C15.1,8 16,8.9 16,10 L16,15 C16,16.1 15.1,17 14,17 Z" id="Shape"></path>
+            <path d="M16.82,32.18 C16.58,31.94 16.22,31.94 15.98,32.18 L14.6,33.56 L14.6,20.6 C14.6,20.24 14.36,20 14,20 C13.64,20 13.4,20.24 13.4,20.6 L13.4,33.56 L12.02,32.18 C11.78,31.94 11.42,31.94 11.18,32.18 C10.94,32.42 10.94,32.78 11.18,33.02 L13.58,35.42 C13.64,35.48 13.7,35.54 13.76,35.54 C13.82,35.6 13.94,35.6 14,35.6 C14.06,35.6 14.18,35.6 14.24,35.54 C14.3,35.48 14.36,35.48 14.42,35.42 L16.82,33.02 C17.06,32.78 17.06,32.42 16.82,32.18 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
