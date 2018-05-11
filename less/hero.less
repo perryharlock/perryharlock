@@ -1,0 +1,39 @@
+.hero {
+    &__heading {
+        font-size: 60px;
+        line-height: 60px;
+        color: @color-white;
+        margin: 60px 0 30px;
+
+        @media @screen-tablet {
+            font-size: 110px;
+            line-height: 110px;
+            margin: 120px 0 70px;
+        }
+    }
+
+    &__sub-heading {
+        font-size: 18px;
+        line-height: 27px;
+        color: @color-white;
+
+        @media @screen-tablet {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        z-index: -1;
+        width: 80%;
+
+        @media @screen-tablet {
+            right: -15px;
+            bottom: 60px;
+            width: auto;
+        }
+    }
+}

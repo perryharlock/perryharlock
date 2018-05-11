@@ -1,0 +1,41 @@
+.nav {
+    float: right;
+
+    &__list {
+        .list-inline;
+    }
+
+    &__item {
+        margin: 0 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        padding: 10px 0;
+        color: @color-white;
+        border: solid 1px transparent;
+        transition: color 0.3s linear;
+        text-transform: uppercase;
+        font-size: 22px;
+
+        &:hover {
+            border-bottom: solid 3px @color-secondary;
+        }
+
+        &:hover, &:active, &:focus {
+            color: @color-secondary;
+            text-decoration: none;
+        }
+
+        &:active, &:focus {
+            border: dashed 1px @color-secondary;
+        }
+    }
+}

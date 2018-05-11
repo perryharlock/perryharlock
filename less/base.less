@@ -8,8 +8,71 @@ body {
     line-height: 32px;
 }
 
-h1, h2, h3, h4, h5, h6, .header {
+.h1, .h2, .h3, .h4, .h5, .h6, .header {
+    .font-bold;
+}
+
+@media (min-width: 1310px) {
+    .container {
+        width: 1280px;
+    }
+}
+
+.font-bold {
     font-family: @font-header;
+    font-weight: 700;
+}
+
+.font-semi {
+    font-family: @font-semi;
+    font-weight: 500;
+}
+
+.font-regular {
+    font-family: @font-type;
+    font-weight: 400;
+}
+
+.max {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.grunge {
+    background: @color-primary url(@grunge) no-repeat left top;
+    background-size: cover;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+
+    @media @screen-tablet {
+        height: 875px;
+        clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+    }
+}
+
+.highlight {
+    color: @color-secondary;
+}
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+    .list-unstyled();
+    margin: 0 0 0 -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 /* Small devices (tablets, 768px and up) */
