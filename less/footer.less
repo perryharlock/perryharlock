@@ -1,4 +1,18 @@
 .footer {
     background-color: @color-primary;
     color: @color-white;
+    position: relative;
+    padding: 100px 0;
+
+    &__scroll {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        display: inline-block;
+        background: url(@scroll-up) center center no-repeat;
+        width: 100%;
+        height: 46px;
+        animation: scrollOpacity 2.5s infinite;
+    }
 }

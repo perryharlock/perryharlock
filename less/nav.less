@@ -1,5 +1,5 @@
 .nav {
-    margin-top: 15px;
+    margin-top: 30px;
     text-align: center;
 
     @media @screen-tablet {
@@ -30,16 +30,17 @@
         transition: color 0.3s linear;
         text-transform: uppercase;
         font-size: 18px;
+        text-decoration: none;
 
         @media @screen-tablet {
             font-size: 22px;
         }
 
-        &:hover {
+        &:hover, &.is-current {
             border-bottom: solid 3px @color-secondary;
         }
 
-        &:hover, &:active, &:focus {
+        &:hover, &:active, &:focus, &.is-current {
             color: @color-secondary;
             text-decoration: none;
         }

@@ -1,5 +1,6 @@
 .skills {
     padding: 30px 0;
+    text-align: center;
 
     @media @screen-tablet {
         padding: 30px 0 180px 0;
@@ -73,6 +74,27 @@
 
         @media @screen-tablet {
             font-size: 20px;
+        }
+    }
+
+    &__link {
+        padding: 15px 30px;
+        display: inline-block;
+        border: solid 2px @color-primary;
+        transition: all 0.3s linear;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 30px 0;
+
+        @media @screen-tablet {
+            margin-bottom: 0;
+        }
+
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            background-color: @color-primary;
+            color: @color-white;
         }
     }
 }

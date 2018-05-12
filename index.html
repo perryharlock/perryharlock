@@ -1,6 +1,4 @@
 ﻿<!DOCTYPE html>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,7 +43,7 @@
 <body class="no-javascript">
     <div class="max">
         <div class="hero__container">
-            <header class="header">
+            <header id="top" class="header">
                 <a href="/" class="logo">
                     <img src="/img/logo.svg" alt="Perry Harlock logo" />
                 </a>
@@ -53,13 +51,16 @@
                 <nav class="nav">
                     <ul class="nav__list list-inline">
                         <li class="nav__item">
-                            <a class="nav__link font-semi" href="#portfolio">Portfolio</a>
+                            <a class="js-nav__link nav__link font-semi" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link font-semi" href="#skills">Skills</a>
+                            <a class="js-nav__link nav__link font-semi" href="#skills">Skills</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link font-semi" href="#contact">Contact</a>
+                            <a class="nav__link font-semi" href="/cv.html">CV</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="js-nav__link nav__link font-semi" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -80,7 +81,7 @@
                     <img class="img-responsive" src="img/perry.svg" alt="Photo of Perry Harlock"/>
                 </figure>
 
-                <a href="#portfolio" class="scroll page-scroll hidden-xs">
+                <a href="#portfolio" class="hero__scroll js-nav__link hidden-xs">
                     <span class="sr-only">Click to jump to the portfolio section</span>
                 </a>
             </section>
@@ -207,7 +208,9 @@
                             </li>
                         </ul>
 
-                        <p class="text-center">These are my most commonly utilised skills on a daily basis. <br/>Check out <a rel="me" target="_blank" href="https://uk.linkedin.com/pub/perry-harlock/12/1b7/170" title="Find out about me on LinkedIn">LinkedIn</a> for more.</p>
+                        <p class="text-center">These are my commonly used skills on an average day.</p>
+
+                        <a href="/cv.html" class="skills__link">Check out my CV</a>
                     </div>
                 </div>
             </div>
@@ -232,11 +235,14 @@
                     </div>
                 </div>
             </div>
+            <a href="#top" class="footer__scroll js-nav__link hidden-xs">
+                <span class="sr-only">Click to jump to the top of this page</span>
+            </a>
     	</footer>
     </div>
 
 	<!-- Javascript -->
-	<script type="text/javascript" src="js/jquery-1.8.2.min.js" defer></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" defer></script>
 	<script src="js-min/script.js" defer></script>
 
 </body>
