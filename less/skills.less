@@ -22,45 +22,91 @@
     }
 
     &__bar {
+        opacity: 0;
+        height: 350px;
+        display: block;
+
+        @media @screen-tablet {
+            height: 450px;
+        }
+
+        &.in-view {
+            .in-view-up;
+        }
+    }
+
+    &__item {
         clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
-        height: 450px;
         flex: 1 0 0px;
         margin: 0 5px;
         align-self: flex-end;
         position: relative;
+        padding-bottom: 30px;
 
         @media @screen-tablet {
             margin: 0 10px;
         }
 
         &:nth-child(1) {
-            background-color: @color-bar-1;
-            margin-left: 0;
+            .skills__bar {
+                background-color: @color-bar-1;
+                margin-left: 0;
+            }
         }
 
         &:nth-child(2) {
-            background-color: @color-bar-2;
-            height: 400px;
+            .skills__bar {
+                background-color: @color-bar-2;
+                height: 300px;
+
+                @media @screen-tablet {
+                    height: 400px;
+                }
+            }
         }
 
         &:nth-child(3) {
-            background-color: @color-bar-3;
-            height: 320px;
+            .skills__bar {
+                background-color: @color-bar-3;
+                height: 240px;
+
+                @media @screen-tablet {
+                    height: 320px;
+                }
+            }
         }
 
         &:nth-child(4) {
-            background-color: @color-bar-4;
-            height: 280px;
+            .skills__bar {
+                background-color: @color-bar-4;
+                height: 200px;
+
+                @media @screen-tablet {
+                    height: 280px;
+                }
+            }
         }
 
         &:nth-child(5) {
-            background-color: @color-bar-5;
-            height: 240px;
+            .skills__bar {
+                background-color: @color-bar-5;
+                height: 160px;
+
+                @media @screen-tablet {
+                    height: 240px;
+                }
+            }
         }
 
         &:nth-child(6) {
-            background-color: @color-bar-6;
-            height: 200px;
+            .skills__bar {
+                background-color: @color-bar-6;
+                height: 130px;
+
+                @media @screen-tablet {
+                    height: 200px;
+                }
+            }
         }
 
         &:last-child {
