@@ -1,0 +1,52 @@
+.nav {
+    margin-top: 30px;
+    text-align: center;
+
+    @media @screen-tablet {
+        margin-top: 10px;
+        float: right;
+    }
+
+    &__item {
+        margin: 0 5px;
+
+        @media @screen-tablet {
+            margin: 0 20px;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        padding: 10px 0;
+        color: @color-white;
+        border: solid 1px transparent;
+        transition: color 0.3s linear;
+        text-transform: uppercase;
+        font-size: 18px;
+        text-decoration: none;
+
+        @media @screen-tablet {
+            font-size: 22px;
+        }
+
+        &:hover, &.is-current {
+            border-bottom: solid 3px @color-secondary;
+        }
+
+        &:hover, &:active, &:focus, &.is-current {
+            color: @color-secondary;
+            text-decoration: none;
+        }
+
+        &:active, &:focus {
+            border: dashed 1px @color-secondary;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="65px" viewBox="0 0 70 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-40.000000, -40.000000)" fill="#FEFBF7">
+            <g id="Hero" transform="translate(0.000000, -132.000000)">
+                <g id="Logo" transform="translate(40.000000, 172.000000)">
+                    <path d="M57.5,3.09276414e-15 L68.007339,0 L70,1.85032803 L68.007339,3.70065607 L59.6079102,3.70065607 L49.2158203,13.3504538 L49.2158203,51.6694685 L59.6079102,61.3192662 L68.0180664,61.3192662 L70,63.1596331 L68.0180664,65 L57.5,65 L45,53.3928571 L45,11.6071429 L57.5,3.09276414e-15 Z" id="Rectangle-5" transform="translate(57.500000, 32.500000) scale(-1, 1) translate(-57.500000, -32.500000) "></path>
+                    <path d="M12.5,3.09276414e-15 L23.007339,0 L25,1.85032803 L23.007339,3.70065607 L14.6079102,3.70065607 L4.21582031,13.3504538 L4.21582031,51.6694685 L14.6079102,61.3192662 L23.0180664,61.3192662 L25,63.1596331 L23.0180664,65 L12.5,65 L0,53.3928571 L0,11.6071429 L12.5,3.09276414e-15 Z" id="Rectangle-5"></path>
+                    <text id="PH" font-family="AmericanTypewriter-Semibold, American Typewriter" font-size="34" font-weight="500">
+                        <tspan x="11" y="44">PH</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

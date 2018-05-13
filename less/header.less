@@ -1,32 +1,7 @@
-// less/header.less
-
 .header {
-	.drop-shadow(0, 4px, 4px, 0.1);
+    padding: 15px 15px 0 15px;
 
-	.title{
-		position:relative;
-		.inline-block;
-	}
-	.social-networks {
-		float:right;
-	}
-	a {
-		color:@type-color;
-
-		&:hover {
-			text-decoration:none;
-		}
-	}
-	h1 {
-		.type-size(66);
-		text-transform: lowercase;
-		padding-bottom:20px;
-	}
-	h2 {
-		font-family:@font-type-base;
-		.type-size(25);
-		position:absolute;
-		right:-55px;
-		top:44px;
-	}
+    @media @screen-tablet {
+        padding: 40px 40px 0 40px;
+    }
 }

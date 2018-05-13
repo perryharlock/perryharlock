@@ -1,0 +1,131 @@
+.hero {
+    text-align: center;
+
+    @media @screen-tablet {
+        text-align: left;
+    }
+
+    &__container {
+        background: @color-primary url(@grunge) no-repeat left top;
+        background-size: cover;
+        height: 540px;
+        overflow: hidden;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+
+        @media @screen-tablet {
+            height: 875px;
+            clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+        }
+
+        @media @screen-laptop {
+            clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        }
+    }
+
+    &__heading {
+        font-size: 52px;
+        line-height: 52px;
+        color: @color-white;
+        margin: 30px 0;
+        opacity: 0;
+
+        @media @screen-tablet {
+            font-size: 110px;
+            line-height: 110px;
+            margin: 70px 0;
+        }
+
+        @media @screen-laptop {
+            margin: 120px 0 70px;
+        }
+
+        &.in-view {
+            .in-view-fade-9;
+        }
+    }
+
+    &__sub-heading {
+        font-size: 18px;
+        line-height: 27px;
+        color: @color-white;
+        max-width: 375px;
+        margin: 0 auto;
+        opacity: 0;
+
+        @media @screen-tablet {
+            font-size: 24px;
+            line-height: 36px;
+            padding-right: 150px;
+            max-width: none;
+        }
+
+        @media @screen-laptop {
+            padding-right: 190px;
+        }
+
+        @media @screen-desktop {
+            padding-right: 150px;
+        }
+
+        @media @screen-desktop-lg {
+            padding-right: 210px;
+        }
+
+        &.in-view {
+            .in-view-fade-9;
+            .in-view-delay-02;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        right: -40px;
+        bottom: -150px;
+        z-index: -1;
+        width: 310px;
+        opacity: 0;
+
+        @media @screen-tablet {
+            right: -65px;
+            bottom: 20px;
+            width: 60%;
+        }
+
+        @media @screen-laptop {
+            width: auto;
+        }
+
+        @media @screen-desktop {
+            right: -15px;
+        }
+
+        &.in-view {
+            .in-view-fade-9;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 130px;
+        display: inline-block;
+        background: url(@scroll-down) center center no-repeat;
+        width: 100%;
+        height: 46px;
+        animation: scrollOpacity 2.5s infinite;
+    }
+}
+
+@keyframes scrollOpacity {
+    0% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}

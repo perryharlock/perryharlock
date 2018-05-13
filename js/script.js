@@ -3,44 +3,53 @@
 	// Remove no-javascript class if js is enabled
 	$("body").removeClass("no-javascript");
 
-	// Function to animate sections
-	var animateSection = function(sectionName, offset){
-		$('html,body').animate({
-		      scrollTop: $(sectionName).offset().top + offset
-		  	}, 1000);
-	}
+    // Variables and Cached Selectors
+    var $navLink = $('.js-nav__link'),
+        $window = $(window),
+        $animationElements = $('.animated'),
+        $printButton = $('.js-print');
 
-	// What happens when a show more / see less trigger ic clicked
-	$("[data-role='portfolio-trigger']").click(function(event){
-		var target = $("[data-role='portfolio-target']");
-		var trigger = $(this);
+    // Functions
 
-		// Open and close the more work section
-		event.preventDefault();
-		target.slideToggle();
+    // Scroll
+    function goToByScroll(id){
+        $('html,body').animate({
+            scrollTop: $(id).offset().top
+        }, 700);
+        scrolled = true;
+    }
 
-		// Amend trigger text and slide to section
-		if (trigger.text() === "See less") {
-			$("[data-role='portfolio-trigger']").text("See more");
-			// Slide to section
-		  	animateSection($(".recent-work"),-140);
-		}
-		else {
-			$("[data-role='portfolio-trigger']").text("See less");
-			// Slide to section
-		  	animateSection($(target),0);
-		};
+    // Load content while in viewport
+    function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
 
-		// Show all triggers then hide one just clicked on
-		$("[data-role='portfolio-trigger']").show();
-		$(this).hide();
+        $.each($animationElements, function() {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
 
-		// Toggle class of trigger
-		$("[data-role='portfolio-trigger']").toggleClass("is-open");
+            if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                $element.addClass('in-view');
+            }
+        });
+    }
 
-		// remove decorated section styling from contact form when portfolio is shown
-	  	$(".contact-form").toggleClass("decorated-section");
+    // Scroll to section of page
+    $navLink.click(function(e) {
+        e.preventDefault();
+        var link = $(this).attr('href');
+        goToByScroll(link);
+    });
 
-	});
+    // Check if in view on scroll or resize
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
 
+    // Print page
+    $printButton.click(function(e) {
+        window.print();
+    });
 });

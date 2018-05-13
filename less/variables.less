@@ -1,25 +1,68 @@
-// less/variables.less
+// fonts
+@font-header:       "Source Sans Pro", sans-serif;
+@font-type:         "Source Sans Pro", sans-serif;
 
-@font-type-base:'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+// colors
+@color-white:       #FEFBF7; // off white
+@color-font:        #333333; // black
+@color-primary:     #11A7DE; // bright blue
+@color-secondary:   #F0DF22; // yellow
+@color-tertiary:    #0077a3; // darker blue
+@color-portfolio:   #F3F3F3; // grey
 
-@font-type-title:Lobster, Georgia, Times, "Times New Roman", serif;
+// backgrounds
+@bg-color-1:        @color-white;
+@bg-color-2:        @color-primary;
+@bg-color-3:        @color-secondary;
+@bg-color-4:        @color-portfolio;
 
-@type-color:#444444;
+// bars
+@color-bar-1:       #B6CC9E;
+@color-bar-2:       #7AA1CD;
+@color-bar-3:       #9B819E;
+@color-bar-4:       #7D78BE;
+@color-bar-5:       #9B9693;
+@color-bar-6:       #B8704F;
 
-@bg-color:#f0f0f0;
+// images
+@grunge:            "../img/grunge.png";
+@scroll-down:       "../img/scroll-down.svg";
+@scroll-up:         "../img/scroll-up.svg";
+@twitter:           "../img/twitter.svg";
+@github:            "../img/github.svg";
+@linkedin:          "../img/linkedin.svg";
 
-@border-color:#aea18d;
+// viewports
+@min-default: 320px;
+@min-phone: 480px;
+@min-smalltablet: 600px;
+@min-tablet: 768px;
+@min-laptop: 992px;
+@min-desktop: 1200px;
+@min-hd: 1480px;
+@max-default: (@min-phone - 1);
+@max-phone: (@min-smalltablet - 1);
+@max-smalltablet: (@min-tablet - 1);
+@max-tablet: (@min-laptop - 1);
+@max-laptop: (@min-desktop - 1);
 
-@link-color:#4E6D7D;
-
-@error-color:#984428;
-
-@input-bg:#F6F6F6;
-
-@input-border:#CCCCCC;
-
-@button-color:#9c9c9c;
-
-@strong-color:#7e7361;
-
-@mark-color:#80fb5b;
+@screen-default: ~"only screen and (max-width: @{min-default})";
+@screen-default-max: ~"only screen and (max-width: @{max-default})";
+@screen-phone: ~"only screen and (min-width: @{min-phone})";
+@screen-phone-max: ~"only screen and (max-width: @{max-phone})";
+@screen-phone-end: ~"and (max-width: @{max-phone})";
+@screen-phone-strict: ~"only screen and (min-width: @{min-phone}) and (max-width: @{max-phone})";
+@screen-smalltablet: ~"only screen and (min-width: @{min-smalltablet})";
+@screen-smalltablet-max: ~"only screen and (max-width: @{max-smalltablet})";
+@screen-smalltablet-end: ~"and (max-width: @{max-smalltablet})";
+@screen-smalltablet-strict: ~"only screen and (min-width: @{min-smalltablet}) and (max-width: @{max-smalltablet})";
+@screen-tablet: ~"only screen and (min-width: @{min-tablet})";
+@screen-tablet-max: ~"only screen and (max-width: @{max-tablet})";
+@screen-tablet-end: ~"and (max-width: @{max-tablet})";
+@screen-tablet-strict: ~"only screen and (min-width: @{min-tablet}) and (max-width: @{max-tablet})";
+@screen-laptop: ~"only screen and (min-width: @{min-laptop})";
+@screen-laptop-max: ~"only screen and (max-width: @{max-laptop})";
+@screen-laptop-end: ~"and (max-width: @{max-laptop})";
+@screen-laptop-strict: ~"only screen and (min-width: @{min-laptop}) and (max-width: @{max-laptop})";
+@screen-desktop: ~"only screen and (min-width: @{min-desktop})";
+@screen-desktop-lg: ~"only screen and (min-width: @{min-hd})";
