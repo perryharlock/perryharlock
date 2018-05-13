@@ -25,6 +25,7 @@
         opacity: 0;
         height: 350px;
         display: block;
+        clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
 
         @media @screen-tablet {
             height: 450px;
@@ -36,12 +37,12 @@
     }
 
     &__item {
-        clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
         flex: 1 0 0px;
         margin: 0 5px;
         align-self: flex-end;
         position: relative;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
+        overflow: hidden;
 
         @media @screen-tablet {
             margin: 0 10px;
@@ -126,6 +127,8 @@
         background-color: @color-white;
         padding: 10px 0;
         width: 100%;
+        border: solid 1px @bg-color-4;
+        border-top: none;
 
         @media @screen-tablet {
             font-size: 20px;

@@ -47,10 +47,15 @@
         height: 50px;
         background: darken(@bg-color-4, 5%);
         border: solid 3px @color-white;
+        opacity: 0;
+
+        &.in-view {
+            .in-view-fade-9;
+            .in-view-delay-02;
+        }
 
         @media @screen-tablet {
             top: 23px;
-            opacity: 0;
 
             &.in-view {
                 .in-view-fade-9;
@@ -129,6 +134,12 @@
         background: @bg-color-4;
         padding: 45px 15px;
         text-align: center;
+        opacity: 0;
+
+        &.in-view {
+            .in-view-fade-9;
+            .in-view-delay-02;
+        }
 
         @media @screen-tablet {
             margin-left: 0;
