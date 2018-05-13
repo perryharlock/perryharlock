@@ -3,7 +3,7 @@ body {
     height: 100%;
     font-family: @font-type;
     color: @color-font;
-    background: @bg-color-1;
+    background: white;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.8;
@@ -47,6 +47,7 @@ a {
 .max {
     max-width: 1920px;
     margin: 0 auto;
+    background-color: @bg-color-1;
 }
 
 .text-right {
@@ -59,6 +60,10 @@ a {
 
 .highlight {
     color: @color-secondary;
+
+    &--primary {
+        color: darken(@color-primary, 5%);
+    }
 }
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style

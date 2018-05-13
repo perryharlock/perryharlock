@@ -2,17 +2,90 @@
     background-color: @color-primary;
     color: @color-white;
     position: relative;
-    padding: 100px 0;
+    padding: 120px 0 20px 0;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
+    @media @screen-tablet {
+        padding: 200px 0 20px 0;
+        clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    @media @screen-laptop {
+        clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &__copyright {
+
+    }
 
     &__scroll {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        bottom: 100px;
         display: inline-block;
         background: url(@scroll-up) center center no-repeat;
         width: 100%;
         height: 46px;
         animation: scrollOpacity 2.5s infinite;
+    }
+
+    &__social {
+        text-align: center;
+        margin-bottom: 150px;
+        max-width: 320px;
+        margin: 0 auto 60px auto;
+
+        @media @screen-tablet {
+            margin: 0 auto 150px auto;
+            max-width: none;
+        }
+
+        > li {
+            &:first-child {
+                margin-right: 25px;
+            }
+
+            @media @screen-tablet {
+                margin: 0 30px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__link {
+        width: 90px;
+        height: 100px;
+        display: block;
+        background-color: @color-white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 70%;
+        transition: background-color 0.3s linear;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+        &:hover {
+            background-color: @color-secondary;
+        }
+
+        &--twitter {
+            background-image: url(@twitter);
+        }
+
+        &--github {
+            background-image: url(@github);
+        }
+
+        &--linkedin {
+            background-image: url(@linkedin);
+            background-size: 60%;
+        }
     }
 }

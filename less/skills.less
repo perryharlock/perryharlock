@@ -1,9 +1,18 @@
 .skills {
-    padding: 30px 0;
+    padding: 30px 0 80px 0;
     text-align: center;
+    background-color: white;
+    margin-bottom: -30px;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 
     @media @screen-tablet {
-        padding: 30px 0 180px 0;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+        padding: 120px 0 180px 0;
+        margin-bottom: -100px;
+    }
+
+    @media @screen-laptop {
+        clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
     }
 
     &__list {
@@ -68,33 +77,12 @@
         font-size: 16px;
         line-height: 1;
         font-weight: 600;
-        background-color: white;
+        background-color: @color-white;
         padding: 10px 0;
         width: 100%;
 
         @media @screen-tablet {
             font-size: 20px;
-        }
-    }
-
-    &__link {
-        padding: 15px 30px;
-        display: inline-block;
-        border: solid 2px @color-primary;
-        transition: all 0.3s linear;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: uppercase;
-        margin: 30px 0;
-
-        @media @screen-tablet {
-            margin-bottom: 0;
-        }
-
-        &:hover, &:active, &:focus {
-            text-decoration: none;
-            background-color: @color-primary;
-            color: @color-white;
         }
     }
 }

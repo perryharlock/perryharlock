@@ -11,7 +11,11 @@
         position: relative;
 
         @media @screen-tablet {
-            padding-top: 130px;
+            padding-top: 100px;
+        }
+
+        @media @screen-desktop {
+            padding: 140px 0;
         }
 
         &:before {
@@ -29,11 +33,12 @@
             transform: rotate(41deg);
 
             @media @screen-tablet {
-                top: -90px;
+                top: -85px;
                 transform: rotate(36deg);
             }
 
             @media @screen-laptop {
+                top: -90px;
                 transform: rotate(38deg);
             }
 
@@ -43,7 +48,19 @@
         }
 
         &:first-child {
-            padding-top: 0;
+            padding-top: 30px;
+
+            @media @screen-tablet {
+                padding-top: 0;
+            }
+
+            @media @screen-laptop {
+                padding-top: 30px;
+            }
+
+            @media @screen-desktop {
+                padding-top: 60px;
+            }
 
             &:before {
                 display: none;
@@ -59,12 +76,13 @@
 
             @media @screen-tablet {
                 clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-                padding: 260px 0;
+                padding: 220px 0;
             }
 
             @media @screen-laptop {
                 clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
                 text-align: right;
+                padding: 260px 0;
 
                 .portfolio__skills {
                     margin: 0 0 0 auto;
@@ -76,11 +94,9 @@
                 top: -5px;
 
                 @media @screen-tablet {
-                    top: 36px;
+                    top: 40px;
                 }
             }
-
-            
         }
     }
 
@@ -125,7 +141,7 @@
 
     &__skills {
         width: 190px;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.5;
         color: @color-tertiary;
         text-transform: uppercase;
@@ -133,6 +149,7 @@
 
         @media @screen-laptop {
             margin: 0;
+            font-size: 18px;
         }
 
         > li {
@@ -140,6 +157,35 @@
 
             @media @screen-tablet {
                 margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__block1 {
+        opacity: 0;
+
+        &.in-view {
+            .in-view-fade-9;
+        }
+
+        @media @screen-laptop {
+            &.in-view {
+                .in-view-right-11;
+                .in-view-delay-02;
+            }
+        }
+    }
+
+    &__block2 {
+        opacity: 0;
+
+        &.in-view {
+            .in-view-fade-9;
+        }
+
+        @media @screen-laptop {
+            &.in-view {
+                .in-view-left-11;
             }
         }
     }

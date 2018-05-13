@@ -8,7 +8,7 @@
     &__container {
         background: @color-primary url(@grunge) no-repeat left top;
         background-size: cover;
-        height: 600px;
+        height: 540px;
         overflow: hidden;
         position: relative;
         clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
@@ -21,10 +21,6 @@
         @media @screen-laptop {
             clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
         }
-
-        &--mini {
-            height: 650px;
-        }
     }
 
     &__heading {
@@ -32,6 +28,7 @@
         line-height: 52px;
         color: @color-white;
         margin: 30px 0;
+        opacity: 0;
 
         @media @screen-tablet {
             font-size: 110px;
@@ -43,16 +40,8 @@
             margin: 120px 0 70px;
         }
 
-        &--mini {
-            font-size: 40px;
-            line-height: 42px;
-            margin-top: 40px;
-
-            @media @screen-tablet {
-                font-size: 60px;
-                line-height: 60px;
-                margin: 40px 0;
-            }
+        &.in-view {
+            .in-view-fade-9;
         }
     }
 
@@ -62,6 +51,7 @@
         color: @color-white;
         max-width: 375px;
         margin: 0 auto;
+        opacity: 0;
 
         @media @screen-tablet {
             font-size: 24px;
@@ -82,27 +72,19 @@
             padding-right: 210px;
         }
 
-        &--mini {
-            .font-regular;
-
-            @media @screen-tablet {
-                font-size: 20px;
-                line-height: 30px;
-                .font-semi;
-            }
-
-            @media @screen-desktop {
-                padding-right: 250px;
-            }
+        &.in-view {
+            .in-view-fade-9;
+            .in-view-delay-02;
         }
     }
 
     &__image {
         position: absolute;
         right: -40px;
-        bottom: -10px;
+        bottom: -150px;
         z-index: -1;
         width: 310px;
+        opacity: 0;
 
         @media @screen-tablet {
             right: -65px;
@@ -118,16 +100,8 @@
             right: -15px;
         }
 
-        &--mini {
-            bottom: -150px;
-
-            @media @screen-tablet {
-                bottom: -50px;
-            }
-
-            @media @screen-laptop {
-                bottom: -110px;
-            }
+        &.in-view {
+            .in-view-fade-9;
         }
     }
 
@@ -135,34 +109,12 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 100px;
+        bottom: 130px;
         display: inline-block;
         background: url(@scroll-down) center center no-repeat;
         width: 100%;
         height: 46px;
         animation: scrollOpacity 2.5s infinite;
-    }
-
-    &__link {
-        padding: 15px 30px;
-        display: inline-block;
-        border: solid 2px @color-secondary;
-        transition: all 0.3s linear;
-        .font-semi;
-        text-decoration: none;
-        text-transform: uppercase;
-        margin-top: 30px;
-        color: @color-white;
-
-        @media @screen-tablet {
-            margin-top: 45px;
-        }
-
-        &:hover, &:active, &:focus {
-            text-decoration: none;
-            background-color: @color-secondary;
-            color: @color-primary;
-        }
     }
 }
 
