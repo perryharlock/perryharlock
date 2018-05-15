@@ -86,9 +86,13 @@
         opacity: 0;
         z-index: 5;
 
+        img {
+            width: 100%;
+        }
+
         @media @screen-tablet {
             right: -65px;
-            bottom: 0;
+            bottom: -60px;
             @supports (clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)) {
                 bottom: 20px;
             }
@@ -96,7 +100,7 @@
         }
 
         @media @screen-laptop {
-            width: auto;
+            width: 675px;
         }
 
         @media @screen-desktop {
