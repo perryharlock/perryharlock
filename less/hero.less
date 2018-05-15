@@ -88,7 +88,10 @@
 
         @media @screen-tablet {
             right: -65px;
-            bottom: 20px;
+            bottom: 0;
+            @supports (clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)) {
+                bottom: 20px;
+            }
             width: 60%;
         }
 
