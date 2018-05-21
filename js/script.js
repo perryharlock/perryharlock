@@ -1,7 +1,7 @@
 ﻿$(document).ready(function(){
 
 	// Remove no-javascript class if js is enabled
-	$("body").removeClass("no-javascript");
+	$("body").removeClass("no-js");
 
     // Variables and Cached Selectors
     var $navLink = $('.js-nav__link'),
