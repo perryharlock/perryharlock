@@ -3,14 +3,14 @@ perryharlock
 
 A copy of my portfolio site https://perryharlock.co.uk  
 
-The npm install will install grunt, autoprefixer, uglify, http-server..and much much more!  
+The npm install will install grunt, autoprefixer, uglify, liver-server..and much much more!  
 
 Grunt will monitor less and js files and compile and minify them when they change as well as on initial run.
 
 1 Install:  
 `npm install`
 
-2 Monitor files and start http-server  
+2 Monitor files and start liver-server  
 `npm start`  
 
 Go to http://localhost:8080/
