@@ -5,7 +5,7 @@ install:
   - pip install --user awscli
 script: npm test
 deploy:
-  script: aws s3 sync ./ s3://www.perryharlock.co.uk/ --delete  --region eu-west-2
+  script: rm -rf ./.git && aws s3 sync ./ s3://www.perryharlock.co.uk/ --delete  --region eu-west-2
   provider: script
   skip_cleanup: true
   on:
