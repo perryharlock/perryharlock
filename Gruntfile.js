@@ -4,6 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     postcss: {
       options: {
+        map: true,
         processors: [
           require('autoprefixer')({browsers: '> 1%'}), // add vendor prefixes
         ]
