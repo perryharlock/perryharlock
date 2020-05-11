@@ -53,3 +53,7 @@
         window.print();
     });
 });
+
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+});
