@@ -1,7 +1,7 @@
-name: 'Build and deploy to production environment'
+name: 'Deploy to AWS'
 env:
   AWS_DEFAULT_REGION: eu-west-1
-  AWS_ACCESS_KEY_ID: AKIAY34U24FA24BCC3OR
+  AWS_ACCESS_KEY_ID: AKIAY34U24FAXEM7PF2E
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   CLOUDFRONT_DISTRIBUTION_ID: E18HXMB3YDSNLJ
 
@@ -15,29 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build Static pages
+      - name: Deploy to AWS
         run: rm -rf ./.git && aws s3 sync ./ s3://www.perryharlock.co.uk/ --delete  --region eu-west-2
       - name: Uncache
         run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
-
-
-
-
-
-
-
-# language: node_js
-# node_js:
-# - 9
-# install:
-#   - pip install --user awscli
-# script: npm test
-# deploy:
-#   script: rm -rf ./.git && aws s3 sync ./ s3://www.perryharlock.co.uk/ --delete  --region eu-west-2
-#   provider: script
-#   skip_cleanup: true
-#   on:
-#     branch: master
-# after_deploy:
-#   - aws configure set preview.cloudfront true
-#   - test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
