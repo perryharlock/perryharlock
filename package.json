@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "start": "grunt & live-server"
+    "start": "grunt"
   },
   "repository": {
     "type": "git",
@@ -17,15 +17,19 @@
     "url": "https://github.com/perryharlock/perryharlock/issues"
   },
   "homepage": "https://github.com/perryharlock/perryharlock#readme",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-less": "^1.4.0",
-    "grunt-contrib-uglify": "^3.1.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "autoprefixer": "^9.8.6",
+    "grunt": "^1.4.0",
+    "grunt-cli": "^1.4.1",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-postcss": "^0.9.0",
-    "jit-grunt": "^0.10.0",
-    "live-server": "^1.2.1"
+    "jit-grunt": "^0.10.0"
   }
 }
