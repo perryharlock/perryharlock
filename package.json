@@ -17,8 +17,13 @@
     "url": "https://github.com/perryharlock/perryharlock/issues"
   },
   "homepage": "https://github.com/perryharlock/perryharlock#readme",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^9.8.6",
     "grunt": "^1.4.0",
     "grunt-cli": "^1.4.1",
     "grunt-contrib-less": "^3.0.0",
