@@ -1,14 +1,14 @@
 .testimonials {
+    background-color: @bg-color-4;
+    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+    margin-bottom: -30px;
     padding: 30px 0 80px 0;
     text-align: center;
-    background-color: @bg-color-4;
-    margin-bottom: -30px;
-    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
 
     @media @screen-tablet {
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
-        padding: 120px 0 180px 0;
         margin-bottom: -100px;
+        padding: 120px 0 180px 0;
     }
 
     @media @screen-laptop {
@@ -77,9 +77,9 @@
         &:after {
             color: @color-primary;
             display: block;
-            height: 46px;
             font-size: 80px;
             font-weight: 200;
+            height: 46px;
             line-height: 1;
             position: absolute;
         }
@@ -91,17 +91,17 @@
             transform: translateX(-50%);
 
             @media @screen-tablet {
-                top: 5px;
                 left: 10px;
+                top: 5px;
                 transform: none;
             }
         }
 
         &:after {
             @media @screen-tablet {
+                bottom: 5px;
                 content: "\201D";
                 right: 10px;
-                bottom: 5px;
             }
         }
     }
@@ -114,25 +114,25 @@
     }
 
     &__btn {
-        padding: 15px 30px;
-        display: inline-block;
-        border: solid 2px @color-primary;
         background: transparent;
-        transition: all 0.3s linear;
+        border: solid 2px @color-primary;
+        display: inline-block;
         .font-semi;
-        text-decoration: none;
-        text-transform: uppercase;
         margin: 30px 0;
         opacity: 0;
+        padding: 15px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s linear;
 
         @media @screen-tablet {
             margin-bottom: 0;
         }
 
         &:hover, &:active, &:focus {
-            text-decoration: none;
             background-color: @color-primary;
             color: @color-white;
+            text-decoration: none;
         }
 
         &.in-view {
