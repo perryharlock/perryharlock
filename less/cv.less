@@ -274,21 +274,30 @@
         }
     }
 
-    &__print {
-        padding: 15px 30px;
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        margin: 45px auto 0 auto;
+        max-width: 400px;
+
+        @media @screen-smalltablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        padding: 15px 0;
         display: inline-block;
         border: solid 2px @color-primary;
         background: transparent;
+        max-width: 160px;
+        margin: 0;
         transition: all 0.3s linear;
         .font-semi;
         text-decoration: none;
         text-transform: uppercase;
-        margin: 30px 0;
         opacity: 0;
-
-        @media @screen-tablet {
-            margin-bottom: 0;
-        }
+        width: 48%;
 
         &:hover, &:active, &:focus {
             text-decoration: none;
