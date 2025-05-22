@@ -49,7 +49,7 @@ export const Footer = () => {
                 </a>
               </li>
             </ul>
-            <div className="text-center font-semibold">&copy; Perry Harlock, 2025</div>
+            <div className="text-center font-bold">&copy; Perry Harlock, 2025</div>
           </div>
         </div>
       </div>

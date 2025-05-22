@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${sourceSans.variable} antialiased`}>
+      <body className={`${sourceSans.variable} antialiased max-w-[1920px] mx-auto`}>
         <Header />
         {children}
         <Footer />

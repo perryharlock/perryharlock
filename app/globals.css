@@ -19,10 +19,9 @@
   --color-foreground: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .container-auto {
+    @apply container mx-auto px-4;
   }
 }
 
@@ -40,6 +39,22 @@
   @media (min-width: 992px) {
     .lg\:footer-top-lg {
       clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  .bottom-clip {
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .md\:bottom-clip-md {
+      clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .lg\:bottom-clip-lg {
+      clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
     }
   }
 }
