@@ -26,8 +26,63 @@
   }
 }
 
+@layer utilities {
+  .footer-top {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .md\:footer-top-md {
+      clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .lg\:footer-top-lg {
+      clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+@layer utilities {
+  .bg-scroll-up {
+    background-image: url("/scroll-up.svg");
+  }
+  .bg-github {
+    background-image: url("/github.svg");
+    background-color: var(--color-white);
+  }
+  .bg-linkedin {
+    background-image: url("/linkedin.svg");
+    background-color: var(--color-white);
+  }
+}
+
+@layer utilities {
+  @supports (clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)) {
+    .clip-path-supported-h-100 {
+      height: 100px;
+    }
+  }
+}
+
+@layer utilities {
+  .clip-hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    line-height: 1.6;
+  }
 }
