@@ -63,6 +63,9 @@
   .bg-scroll-up {
     background-image: url("/scroll-up.svg");
   }
+  .bg-scroll-down {
+    background-image: url("/scroll-down.svg");
+  }
   .bg-github {
     background-image: url("/github.svg");
     background-color: var(--color-white);

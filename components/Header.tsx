@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
 
 export const Header = () => {
   const menuItems = [
@@ -50,10 +51,12 @@ export const Header = () => {
   return (
     <header id="top" className="py-[15px] pb-0 md:py-[40px] md:pb-0 bg-blue-500">
       <div className="container-auto md:flex md:justify-between">
-        <img
+        <Image
           className="block w-[50px] h-[46px] my-0 mx-auto md:w-[70px] md:h-[65px] md:inline-block md:m-0"
           src="/logo.svg"
           alt="Perry Harlock logo"
+          width="70"
+          height="65"
         />
 
         <nav className="text-center mt-[30px] md:mt-[10px]">

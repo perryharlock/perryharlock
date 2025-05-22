@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -24,20 +24,21 @@ export const Hero = () => {
       </div>
 
       <figure className="animated hero__image absolute right-[-40px] bottom-[-155px] w-[310px] z-10 md:w-3/5 md:right-[-65px] md:bottom-0 lg:w-[675px] xl:right-[-15px]">
-        <picture>
-          <source srcSet="/perry.webp" type="image/webp" />
-          <img
-            height="674"
-            width="689"
-            src="/perry.png"
-            className="w-full"
-            alt="A smiling Perry Harlock!"
-            loading="eager"
-          />
-        </picture>
+        <Image
+          height="674"
+          width="689"
+          src="/perry.webp"
+          className="w-full"
+          alt="A smiling Perry Harlock!"
+          loading="eager"
+          priority
+        />
       </figure>
 
-      <a href="#portfolio" className="hero__scroll js-nav__link hidden-xs">
+      <a
+        href="#portfolio"
+        className="absolute hidden md:inline-block left-0 right-0 bottom-[130px] w-full h-[46px] bg-center bg-no-repeat bg-scroll-down animate-pulse"
+      >
         <span className="sr-only">Click to jump to the portfolio section</span>
       </a>
     </section>
