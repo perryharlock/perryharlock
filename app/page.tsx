@@ -1,15 +1,13 @@
+import { CVSection } from "@/components/CVSection";
 import { Hero } from "@/components/Hero";
+import { PortfolioSection } from "@/components/PortfolioSection";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <section id="portfolio" className="h-[500px]">
-        Portfolio Section
-      </section>
-      <section id="cv" className="h-[500px]">
-        CV Section
-      </section>
+      <PortfolioSection />
+      <CVSection />
     </main>
   );
 }

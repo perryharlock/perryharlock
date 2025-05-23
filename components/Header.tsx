@@ -49,7 +49,7 @@ export const Header = () => {
   const lastItem = menuItems.length;
 
   return (
-    <header id="top" className="py-[15px] pb-0 md:py-[40px] md:pb-0 bg-blue-500">
+    <header id="top" className="py-[15px] pb-0 md:py-[40px] md:pb-0 bg-blue-500 print:hidden">
       <div className="container-auto md:flex md:justify-between">
         <Image
           className="block w-[50px] h-[46px] my-0 mx-auto md:w-[70px] md:h-[65px] md:inline-block md:m-0"
