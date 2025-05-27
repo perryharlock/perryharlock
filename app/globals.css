@@ -8,8 +8,11 @@
 @theme {
   --color-white: #fefbf7;
   --color-blue-500: #11a7de;
+  --color-blue-600: #0f95c6;
   --color-blue-700: #0077a3;
   --color-grey-100: #f3f3f3;
+  --color-grey-500: #e6e6e6;
+  --color-grey-800: #595959;
   --color-grey-900: #333333;
   --color-yellow-500: #f0df22;
 }
@@ -127,6 +130,30 @@
 
   .fade-9 {
     animation: fadeIn 0.9s forwards;
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-left-11 {
+      animation: fadeInLeft 1.1s forwards;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-right-11 {
+      animation: fadeInRight 1.1s forwards;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-left-11-delay-2 {
+      animation: fadeInLeft 1.1s forwards 0.2s;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-right-11-delay-2 {
+      animation: fadeInRight 1.1s forwards 0.2s;
+    }
   }
 
   @media (min-width: 1024px) {
