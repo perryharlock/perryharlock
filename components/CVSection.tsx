@@ -4,9 +4,21 @@ import { CVItem } from "./CVItem";
 
 const cvItems = [
   {
+    employer: "Solirius Reply",
+    role: "Principal Front End Developer",
+    date: "Aug 2022 - present",
+    linkUrl: "https://www.solirius.com",
+    linkText: "www.solirius.com",
+    description: [
+      "My role involves overseeing the development of user interfaces, ensuring they are accessible, performant, and adhere to best practices.",
+      "I am also responsible for managing developers, and helping guide the front end guild.",
+      "Current project utilises NextJS, Typescript, React, Tailwind, NX Monorepo, Storybook and Figma.",
+    ],
+  },
+  {
     employer: "Hussle",
     role: "Senior Front End Developer",
-    date: "Dec 2018 - present",
+    date: "Dec 2018 - May 2022",
     linkUrl: "https://www.hussle.com",
     linkText: "www.hussle.com",
     description: [
