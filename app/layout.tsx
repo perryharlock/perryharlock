@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Source_Sans_3 } from "next/font/google";
 import { Header } from "@/components/Header";
-import "./globals.css";
 import { Footer } from "@/components/Footer";
+import "./globals.css";
 
 const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
@@ -38,10 +39,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="google-site-verification" content="aPkK8uKcFnWxU-hvl-BM8QBPrJNFDYTWLM70o2JTNLk" />
+      </head>
       <body className={`${sourceSans.variable} antialiased max-w-[1920px] mx-auto no-js`}>
         <Header />
         {children}
         <Footer />
+        {/* Load gtag.js from Google Tag Manager */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-M961LTZQ9W" strategy="afterInteractive" />
+
+        {/* Initialize GA4 */}
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-M961LTZQ9W', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </body>
     </html>
   );

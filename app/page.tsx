@@ -1,6 +1,7 @@
-import { CVSection } from "@/components/CVSection";
 import { Hero } from "@/components/Hero";
 import { PortfolioSection } from "@/components/PortfolioSection";
+import { CVSection } from "@/components/CVSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <PortfolioSection />
       <CVSection />
+      <TestimonialsSection />
     </main>
   );
 }

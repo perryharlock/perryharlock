@@ -18,7 +18,7 @@ export const CVItem = ({ index, employer, role, date, linkUrl, linkText, descrip
 
   return (
     <li className={twMerge("relative my-[120px] md:my-[160px]", isFirst && "mt-0 md:mt-0", isLast && "!mb-0")}>
-      <div className="container-auto">
+      <div className="container">
         <div className="md:grid md:grid-cols-12 md:gap-4">
           <AnimatedElement animationClass="fade-9-delay-2 absolute top-[-24px] left-[50%] -translate-x-1/2 z-10 md:top-[7px]">
             <span className="inline-block bg-grey-500 rotate-45 w-[50px] h-[50px] border-3 border-white" />

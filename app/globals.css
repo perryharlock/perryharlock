@@ -107,6 +107,22 @@
     }
   }
 
+  .clip-testimonials {
+    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .md\:clip-testimonials {
+      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:clip-testimonials {
+      clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
   /* Animation classes */
   .will-animate {
     opacity: 0;

@@ -3,15 +3,17 @@ import { useInView } from "@/hooks/useInView";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
+interface AnimatedElementProps {
+  animationClass?: string;
+  children: React.ReactNode;
+  element?: React.ElementType;
+}
+
 export const AnimatedElement = ({
   animationClass = "fade-9",
-  visibleClass = "will-animate",
   children,
-}: {
-  animationClass?: string;
-  visibleClass?: string;
-  children: React.ReactNode;
-}) => {
+  element: Element = "div",
+}: AnimatedElementProps) => {
   const { ref, isInView } = useInView();
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -26,14 +28,14 @@ export const AnimatedElement = ({
   }, [isInView, hasAnimated]);
 
   return (
-    <div
+    <Element
       ref={ref}
       className={twMerge(
-        visibleClass, // ensures visible for no-JS users
+        "will-animate", // ensures visible for no-JS users
         hasAnimated ? animationClass : ""
       )}
     >
       {children}
-    </div>
+    </Element>
   );
 };

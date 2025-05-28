@@ -47,7 +47,7 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
-        <div className="text-center font-bold">&copy; Perry Harlock, 2025</div>
+        <div className="text-center font-bold">&copy; {new Date().getFullYear()} Perry Harlock</div>
       </div>
       <a
         href="#top"
