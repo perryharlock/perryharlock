@@ -20,7 +20,7 @@ const testimonialItems = [
     text: (
       <>
         Perry is a pragmatic and meticulous worker. His attention to detail in either design or CSS helps him produce
-        high quality products. <br /> He's an excellent communicator and is in his element discussing the technical
+        high quality products. <br /> He&apos;s an excellent communicator and is in his element discussing the technical
         detail with the team. His many years working in the industry give him that extra level of experience to draw on
         when evaluating ideas.
       </>

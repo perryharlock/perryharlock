@@ -1,5 +1,3 @@
-import { twMerge } from "tailwind-merge";
-
 interface SectionProps {
   title: string;
   id?: string;

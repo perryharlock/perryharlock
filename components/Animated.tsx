@@ -5,12 +5,14 @@ import { twMerge } from "tailwind-merge";
 
 interface AnimatedElementProps {
   animationClass?: string;
+  classes?: string;
   children: React.ReactNode;
   element?: React.ElementType;
 }
 
 export const AnimatedElement = ({
   animationClass = "fade-9",
+  classes,
   children,
   element: Element = "div",
 }: AnimatedElementProps) => {
@@ -32,6 +34,7 @@ export const AnimatedElement = ({
       ref={ref}
       className={twMerge(
         "will-animate", // ensures visible for no-JS users
+        classes,
         hasAnimated ? animationClass : ""
       )}
     >

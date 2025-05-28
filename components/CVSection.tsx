@@ -1,5 +1,3 @@
-"use client";
-import { twMerge } from "tailwind-merge";
 import { AnimatedElement } from "./Animated";
 import { Section } from "./Section";
 import { CVItem } from "./CVItem";
@@ -111,15 +109,7 @@ const cvItems = [
   },
 ];
 
-const buttonClasses =
-  "py-[15px] inline-block border-2 border-blue-500 bg:transparent max-w-[160px] m-0 uppercase w-[48%] cursor-pointer font-bold transition-all duration-300 ease-linear hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white active:bg-blue-500 active:text-white";
-
 export const CVSection = () => {
-  const handlePrint = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.print();
-  };
-
   return (
     <Section id="cv" title="CV">
       <>
@@ -127,7 +117,7 @@ export const CVSection = () => {
           <p>
             Perry Harlock – UI Developer / Designer <br />
             web: www.perryharlock.co.uk <br />
-            email: hi@perryharlock.co.uk
+            email: admin@perryharlock.co.uk
           </p>
         </div>
         <div className="container-auto">
@@ -136,27 +126,17 @@ export const CVSection = () => {
               <div className="text-center mt-[30px] mb-[65px] md:mb-[100px]">
                 <AnimatedElement animationClass="fade-9-delay-2">
                   <p className="mb-4">
-                    I'm a <span className="font-bold">Front-end of front-end</span> focused UI developer with over 10
-                    years of experience.
+                    I&apos;m a <span className="font-bold">Front-end of front-end</span> focused UI developer with over
+                    10 years of experience.
                   </p>
                   <p className="mb-4">
-                    I love <span className="font-bold">CSS</span> and also enjoy spending time in Sketch or Figma. I'm
-                    into bringing designs to life in code and writing accessible, semantic and performant components /
-                    pages.
+                    I love <span className="font-bold">CSS</span> and also enjoy spending time in Sketch or Figma.
+                    I&apos;m into bringing designs to life in code and writing accessible, semantic and performant
+                    components / pages.
                   </p>
                   <p className="mb-4 font-bold">
                     HTML(5), CSS(3), LESS, Sass, NextJS, Typescript, React, Figma, Sketch, Git, Agile
                   </p>
-                </AnimatedElement>
-                <AnimatedElement animationClass="fade-9-delay-4">
-                  <div className="flex justify-between mt-[45px] mx-auto max-w-[400px] print:hidden">
-                    <button onClick={(e) => handlePrint(e)} className={twMerge(buttonClasses, "js-print")}>
-                      Print CV
-                    </button>
-                    <a className={buttonClasses} target="_blank" href="/docs/Perry-Harlock-CV.pdf">
-                      Download CV
-                    </a>
-                  </div>
                 </AnimatedElement>
               </div>
             </div>

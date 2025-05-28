@@ -42,12 +42,11 @@ export const TestimonialItem = ({ index, text }: TestimonialItemProps) => {
   return (
     <AnimatedElement
       element="li"
-      animationClass={twMerge(
+      animationClass={twMerge("fade-9", isEven ? "md:fade-in-right-11" : "md:fade-in-left-11-delay-2")}
+      classes={twMerge(
         commaClasses,
         beforeClasses,
         afterClasses,
-        "fade-9",
-        isEven ? "md:fade-in-right-11" : "md:fade-in-left-11-delay-2",
         "bg-white mb-[30px] pt-[60px] px-[40px] pb-[30px] relative md:py-[30px] md:px-[60px] lg:items-center lg:flex lg:w-[calc(50%-30px)]"
       )}
     >
