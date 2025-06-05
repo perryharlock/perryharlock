@@ -11,7 +11,7 @@ const portfolioItems = [
     imageSrc: "/norton-studios.webp",
     imageAlt: "Norton studios screenshot on laptop and phone",
     imageWidth: 1167,
-    imageHeight: 671,
+    imageHeight: 670,
   },
   {
     title: "Benebox",
@@ -22,7 +22,7 @@ const portfolioItems = [
     imageSrc: "/benebox.webp",
     imageAlt: "Benebox screenshot on laptop and phone",
     imageWidth: 1167,
-    imageHeight: 671,
+    imageHeight: 670,
   },
   {
     title: "Hussle",
