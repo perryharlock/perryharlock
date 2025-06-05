@@ -3,6 +3,17 @@ import { Section } from "./Section";
 
 const portfolioItems = [
   {
+    title: "Benebox",
+    description: "Front end build",
+    linkUrl: "https://www.joinbenebox.com/",
+    linkText: "Visit site",
+    skills: ["NextJS / Typescript", "Tailwind CSS", "Responsive", "Figma"],
+    imageSrc: "/benebox.webp",
+    imageAlt: "Benebox screenshot on laptop",
+    imageWidth: 1167,
+    imageHeight: 671,
+  },
+  {
     title: "Hussle",
     description: "Front end build",
     linkUrl: "https://www.hussle.com",

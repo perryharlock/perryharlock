@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "Online portfolio of Perry Harlock, a kent based UI Developer / Designer working in London",
     url: "https://perryharlock.co.uk",
     type: "website",
-    images: ["https://www.perryharlock.co.uk/perry.png"],
+    images: ["https://www.perryharlock.co.uk/perry.webp"],
   },
 };
 
