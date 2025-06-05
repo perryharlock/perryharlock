@@ -26,7 +26,7 @@ jobs:
       - name: Build and export static site
         run: |
           npm run build
-          npx next export
+
       - name: Deploy to AWS
         run: rm -rf ./.git && aws s3 sync ./out s3://www.perryharlock.co.uk/ --delete  --region eu-west-2
       - name: Uncache

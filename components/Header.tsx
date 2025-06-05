@@ -57,6 +57,8 @@ export const Header = () => {
           alt="Perry Harlock logo"
           width="70"
           height="65"
+          unoptimized
+          loading="eager"
         />
 
         <nav className="text-center mt-[30px] md:mt-[10px]">

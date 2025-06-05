@@ -43,6 +43,7 @@ export const Hero = () => {
             alt="A smiling Perry Harlock!"
             loading="eager"
             priority
+            unoptimized
           />
         </figure>
       </AnimatedElement>

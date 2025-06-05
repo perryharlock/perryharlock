@@ -104,7 +104,7 @@ export const PortfolioItem = ({
                 width={imageWidth}
                 className="img-responsive lazy"
                 alt={imageAlt}
-                loading="lazy"
+                unoptimized
               />
             </AnimatedElement>
           </div>
