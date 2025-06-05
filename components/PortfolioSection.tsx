@@ -3,13 +3,24 @@ import { Section } from "./Section";
 
 const portfolioItems = [
   {
+    title: "Norton Studios",
+    description: "Front end build",
+    linkUrl: "https://www.norton-studios.co.uk",
+    linkText: "Visit site",
+    skills: ["NextJS / Typescript", "Tailwind CSS", "Responsive", "Figma"],
+    imageSrc: "/norton-studios.webp",
+    imageAlt: "Norton studios screenshot on laptop and phone",
+    imageWidth: 1167,
+    imageHeight: 671,
+  },
+  {
     title: "Benebox",
     description: "Front end build",
-    linkUrl: "https://www.joinbenebox.com/",
+    linkUrl: "https://www.joinbenebox.com",
     linkText: "Visit site",
     skills: ["NextJS / Typescript", "Tailwind CSS", "Responsive", "Figma"],
     imageSrc: "/benebox.webp",
-    imageAlt: "Benebox screenshot on laptop",
+    imageAlt: "Benebox screenshot on laptop and phone",
     imageWidth: 1167,
     imageHeight: 671,
   },
