@@ -28,6 +28,7 @@ export const Footer = () => {
     <footer
       className="bg-blue-500 text-grey-900 relative pt-[120px] md:pt-[200px] pb-[20px] footer-top md:footer-top-md lg:footer-top-lg"
       id="contact"
+      data-testid="footer"
     >
       <div className="container-auto">
         <ul className={twMerge(socialClasses)}>
@@ -38,8 +39,11 @@ export const Footer = () => {
               rel="me noreferrer"
               href="https://uk.linkedin.com/pub/perry-harlock/12/1b7/170"
               title="Find out about me on LinkedIn"
+              data-testid="linkedin-link"
             >
-              <span className="sr-only">LinkedIn</span>
+              <span data-testid="linkedin-link-sr" className="sr-only">
+                LinkedIn
+              </span>
             </a>
           </li>
           <li className="md:ml-[30px] inline-block">
@@ -49,17 +53,21 @@ export const Footer = () => {
               rel="me noreferrer"
               href="https://github.com/perryharlock"
               title="Check me out on GitHub"
+              data-testid="github-link"
             >
-              <span className="sr-only">GitHub</span>
+              <span data-testid="github-link-sr" className="sr-only">
+                GitHub
+              </span>
             </a>
           </li>
         </ul>
-        <div className="text-center font-bold">
+        <div data-testid="copyright" className="text-center font-bold">
           &copy; {new Date().getFullYear()} Perry Harlock
         </div>
       </div>
       <a
         href="#top"
+        data-testid="back-to-top"
         className="absolute hidden md:inline-block left-0 right-0 bottom-[100px] w-full h-[46px] bg-center bg-no-repeat bg-scroll-up animate-pulse"
       >
         <span className="sr-only">Click to jump to the top of this page</span>

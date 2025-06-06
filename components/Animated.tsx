@@ -7,6 +7,7 @@ interface AnimatedElementProps {
   animationClass?: string;
   classes?: string;
   children: React.ReactNode;
+  testId?: string;
   element?: React.ElementType;
 }
 
@@ -14,6 +15,7 @@ export const AnimatedElement = ({
   animationClass = 'fade-9',
   classes,
   children,
+  testId,
   element: Element = 'div',
 }: AnimatedElementProps) => {
   const { ref, isInView } = useInView();
@@ -32,6 +34,7 @@ export const AnimatedElement = ({
   return (
     <Element
       ref={ref}
+      data-testid={testId ?? 'animated-element'}
       className={twMerge(
         'will-animate', // ensures visible for no-JS users
         classes,

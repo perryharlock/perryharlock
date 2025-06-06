@@ -46,6 +46,7 @@ export const TestimonialItem = ({ index, text }: TestimonialItemProps) => {
   return (
     <AnimatedElement
       element="li"
+      testId={`testimonial-item-${index}`}
       animationClass={twMerge(
         'fade-9',
         isEven ? 'md:fade-in-right-11' : 'md:fade-in-left-11-delay-2',
@@ -58,11 +59,11 @@ export const TestimonialItem = ({ index, text }: TestimonialItemProps) => {
       )}
     >
       <h4 className="text-[16px] font-semibold leading-[2] m-0">
-        {text.map((text, index) => {
-          const isLast = index === text.length - 1;
+        {text.map((textItem, index) => {
+          const isLast = text.length > 0 && index === text.length - 1;
           return (
             <React.Fragment key={index}>
-              {text} {!isLast ? <br /> : null}
+              {textItem} {!isLast ? <br /> : null}
             </React.Fragment>
           );
         })}

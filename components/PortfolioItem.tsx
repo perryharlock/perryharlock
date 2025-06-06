@@ -60,6 +60,7 @@ export const PortfolioItem = ({
         !isFirst && beforeContent,
         evenClasses,
       )}
+      data-testid={`portfolio-item-${index}`}
     >
       <div className="container-auto">
         <div className="lg:grid lg:grid-cols-12 lg:gap-4">
