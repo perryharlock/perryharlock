@@ -1,5 +1,6 @@
 {
-    "yaml.schemas": {
-        "https://json.schemastore.org/github-workflow.json": "file:///Users/perryharlock/Documents/perryharlock/.github/workflows/deploy.yml"
-    }
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/perryharlock/Documents/perryharlock/.github/workflows/deploy.yml"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
