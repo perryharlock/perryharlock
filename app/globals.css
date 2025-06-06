@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fefbf7;
+  --foreground: #333333;
+}
+
+@theme {
+  --color-white: #fefbf7;
+  --color-blue-500: #11a7de;
+  --color-blue-600: #0f95c6;
+  --color-blue-700: #0077a3;
+  --color-grey-100: #f3f3f3;
+  --color-grey-500: #e6e6e6;
+  --color-grey-800: #595959;
+  --color-grey-900: #333333;
+  --color-yellow-500: #f0df22;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@layer components {
+  .container-auto {
+    @apply container mx-auto px-4;
+  }
+}
+
+@layer utilities {
+  /* Diagonals */
+  .footer-top {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .md\:footer-top-md {
+      clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:footer-top-lg {
+      clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  .bottom-clip {
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .md\:bottom-clip-md {
+      clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:bottom-clip-lg {
+      clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+    }
+  }
+
+  /* Background images */
+  .bg-scroll-up {
+    background-image: url("/scroll-up.svg");
+  }
+
+  .bg-scroll-down {
+    background-image: url("/scroll-down.svg");
+  }
+
+  .bg-github {
+    background-image: url("/github.svg");
+    background-color: var(--color-white);
+  }
+
+  .bg-linkedin {
+    background-image: url("/linkedin.svg");
+    background-color: var(--color-white);
+  }
+
+  /* Footer hexagons */
+  @supports (clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)) {
+    .clip-path-supported-h-100 {
+      height: 100px;
+    }
+  }
+  .clip-hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .clip-portfolio {
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .md\:clip-portfolio {
+      clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:clip-portfolio {
+      clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    }
+  }
+
+  .clip-testimonials {
+    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .md\:clip-testimonials {
+      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:clip-testimonials {
+      clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  /* Animation classes */
+  .will-animate {
+    opacity: 0;
+  }
+
+  .no-js .will-animate {
+    opacity: 1;
+  }
+
+  .fade-9-delay-2 {
+    animation: fadeIn 0.9s forwards 0.2s;
+  }
+
+  .fade-9-delay-4 {
+    animation: fadeIn 0.9s forwards 0.4s;
+  }
+
+  .fade-3 {
+    animation: fadeIn 0.3s forwards;
+  }
+
+  .fade-9 {
+    animation: fadeIn 0.9s forwards;
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-left-11 {
+      animation: fadeInLeft 1.1s forwards;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-right-11 {
+      animation: fadeInRight 1.1s forwards;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-left-11-delay-2 {
+      animation: fadeInLeft 1.1s forwards 0.2s;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:fade-in-right-11-delay-2 {
+      animation: fadeInRight 1.1s forwards 0.2s;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:fade-in-left {
+      animation: fadeInLeft 0.9s forwards;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:fade-in-right {
+      animation: fadeInRight 0.9s forwards;
+    }
+  }
+
+  /* Keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .fadeInLeft {
+    animation-name: fadeInLeft;
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(90px, 0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .fadeInRight {
+    animation-name: fadeInRight;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    line-height: 1.6;
+  }
+}

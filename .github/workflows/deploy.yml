@@ -1,4 +1,4 @@
-name: 'Deploy to AWS'
+name: "Deploy to AWS"
 env:
   AWS_DEFAULT_REGION: eu-west-1
   AWS_ACCESS_KEY_ID: AKIAY34U24FAXEM7PF2E
@@ -15,7 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and export static site
+        run: |
+          npm run build
+
       - name: Deploy to AWS
-        run: rm -rf ./.git && aws s3 sync ./ s3://www.perryharlock.co.uk/ --delete  --region eu-west-2
+        run: rm -rf ./.git && aws s3 sync ./out s3://www.perryharlock.co.uk/ --delete  --region eu-west-2
       - name: Uncache
         run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"

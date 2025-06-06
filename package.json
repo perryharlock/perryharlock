@@ -1,35 +1,29 @@
 {
-  "name": "perryharlock",
-  "version": "1.0.0",
-  "description": "Portfolio site for Perry Harlock",
-  "main": "Gruntfile.js",
+  "name": "perryharlock.co.uk",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "start": "grunt"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "serve out",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/perryharlock/perryharlock.git"
+  "dependencies": {
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/perryharlock/perryharlock/issues"
-  },
-  "homepage": "https://github.com/perryharlock/perryharlock#readme",
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
-  ],
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "grunt": "^1.4.0",
-    "grunt-cli": "^1.4.1",
-    "grunt-contrib-less": "^3.0.0",
-    "grunt-contrib-uglify": "^5.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-postcss": "^0.9.0",
-    "jit-grunt": "^0.10.0"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

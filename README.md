@@ -1,25 +1,19 @@
-perryharlock
-============
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A copy of my portfolio site https://perryharlock.co.uk  
+## Getting Started
 
-The npm install will install grunt, autoprefixer, uglify..and much much more!  
+First, run the development server:
 
-Grunt will monitor less and js files and compile and minify them when they change as well as on initial run.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-1 Install:  
-`npm install`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-2 Monitor files 
-`npm start`  
-
-3 In VSCode use the live server extension to start a server and see the website
-(if you right click on the index.html file there is an option to open with live server)
-
-NOTE
-====
-
-- Minimal version bootstrap with grid, utilities, responsive utilities and scaffolding
-- Using 24 column bootstrap grid
-- Larger screen breakpoint added for grid at 1310px
-- All Less/CSS is prefixed and minimised on compilation
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
