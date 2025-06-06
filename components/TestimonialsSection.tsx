@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { AnimatedElement } from "./Animated";
 import { Section } from "./Section";
 import { TestimonialItem } from "./TestimonialItem";
+import { Button } from "./Button";
 
 const testimonialItems = [
   {
@@ -67,13 +68,12 @@ export const TestimonialsSection = () => {
             })}
           </ul>
           <AnimatedElement animationClass="fade-9-delay-4">
-            <a
-              target="_blank"
+            <Button
               href="https://www.linkedin.com/in/perry-harlock-1701b712/details/recommendations"
-              className={twMerge(buttonClasses)}
-            >
-              See more testimonials
-            </a>
+              classNames="my-[30px] md:mb-0"
+              linkText="See more testimonials"
+              target="_blank"
+            />
           </AnimatedElement>
         </div>
       </>
