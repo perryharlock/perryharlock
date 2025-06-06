@@ -1,5 +1,4 @@
 "use client";
-import { twMerge } from "tailwind-merge";
 import { AnimatedElement } from "./Animated";
 import { Section } from "./Section";
 import { TestimonialItem } from "./TestimonialItem";
@@ -46,9 +45,6 @@ const testimonialItems = [
     ),
   },
 ];
-
-const buttonClasses =
-  "py-[15px] px-[30px] inline-block border-2 border-blue-500 bg:transparent my-[30px] md:mb-0 uppercase cursor-pointer font-bold transition-all duration-300 ease-linear hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white active:bg-blue-500 active:text-white";
 
 export const TestimonialsSection = () => {
   return (
