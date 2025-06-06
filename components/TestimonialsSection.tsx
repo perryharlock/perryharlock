@@ -70,7 +70,6 @@ export const TestimonialsSection = () => {
             <a
               target="_blank"
               href="https://www.linkedin.com/in/perry-harlock-1701b712/details/recommendations"
-              title="See more testimonials"
               className={twMerge(buttonClasses)}
             >
               See more testimonials

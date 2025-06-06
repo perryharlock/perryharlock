@@ -44,9 +44,9 @@ export const CVItem = ({ index, employer, role, date, linkUrl, linkText, descrip
                 {employer}
               </h4>
               <h5 className="m-0 font-bold md:mt-[10px] md:hidden">{role}</h5>
-              <p className="md:hidden text-[16px] leading-[16px] my-[5px] font-semibold text-grey-800 md:text-[22px] md:leading-[30px] md:mt-0 md:text-blue-500">
+              <h6 className="md:hidden text-[16px] leading-[16px] my-[5px] font-semibold text-grey-800 md:text-[22px] md:leading-[30px] md:mt-0 md:text-blue-500">
                 {date}
-              </p>
+              </h6>
               <a
                 className="text-[16px] text-blue-700 hover:text-blue-500 active:text-blue-500 focus:text-blue-500 md:hidden"
                 href={linkUrl}
@@ -71,10 +71,10 @@ export const CVItem = ({ index, employer, role, date, linkUrl, linkText, descrip
             )}
           >
             <>
-              <p className="text-[16px] leading-[16px] my-[5px] font-semibold text-grey-800 md:text-[22px] md:leading-[30px] md:mt-0 md:text-blue-500">
+              <h5 className="text-[16px] leading-[16px] my-[5px] font-semibold text-grey-800 md:text-[22px] md:leading-[30px] md:mt-0 md:text-blue-500">
                 {date}
-              </p>
-              <h5 className="m-0 font-bold md:mt-[6px]">{role}</h5>
+              </h5>
+              <h6 className="m-0 font-bold md:mt-[6px]">{role}</h6>
               <a
                 className="text-[16px] text-blue-700 hover:text-blue-500 active:text-blue-500 focus:text-blue-500"
                 href={linkUrl}

@@ -73,7 +73,7 @@ export const PortfolioItem = ({
               <h4 className="text-[38px] uppercase mb-[10px] md:text-[45px] md:mb-[20px] font-bold leading-[38px] md:leading-[45px]">
                 {title}
               </h4>
-              <p className="italic text-[24px] mb-[10px] leading-[24px]">{description}</p>
+              <h5 className="italic text-[24px] mb-[10px] leading-[24px]">{description}</h5>
               <a
                 className="text-[16px] font-semibold uppercase no-underline inline-block border-2 border-primary text-blue-500 px-[25px] py-[15px] my-[10px] mt-[10px] mb-[20px] transition-all duration-300 ease-linear hover:bg-blue-500 hover:text-white hover:no-underline md:my-[20px] md:mb-[30px]"
                 href={linkUrl}
