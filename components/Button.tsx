@@ -1,12 +1,21 @@
-import { AnchorHTMLAttributes } from "react";
-import { twMerge } from "tailwind-merge";
+import { AnchorHTMLAttributes } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-type ButtonProps = Pick<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "target" | "rel"> & {
+type ButtonProps = Pick<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  'href' | 'target' | 'rel'
+> & {
   linkText: string;
   classNames?: string;
 };
 
-export const Button = ({ linkText, classNames, href, target, rel }: ButtonProps) => {
+export const Button = ({
+  linkText,
+  classNames,
+  href,
+  target,
+  rel,
+}: ButtonProps) => {
   const commonClasses = [
     `inline-block uppercase font-bold text-grey-900`,
     `px-[30px] py-[15px]`,
@@ -18,7 +27,12 @@ export const Button = ({ linkText, classNames, href, target, rel }: ButtonProps)
   ];
 
   return (
-    <a className={twMerge(commonClasses, classNames)} href={href} target={target} rel={rel}>
+    <a
+      className={twMerge(commonClasses, classNames)}
+      href={href}
+      target={target}
+      rel={rel}
+    >
       {linkText}
     </a>
   );

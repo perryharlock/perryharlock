@@ -1,20 +1,27 @@
-import { twMerge } from "tailwind-merge";
+import { twMerge } from 'tailwind-merge';
 
 export const Footer = () => {
-  const socialClasses = ["text-center", "mb-[60px]", "max-w-[320px]", "mx-auto", "md:mb-[150px]", "md:max-w-none"];
+  const socialClasses = [
+    'text-center',
+    'mb-[60px]',
+    'max-w-[320px]',
+    'mx-auto',
+    'md:mb-[150px]',
+    'md:max-w-none',
+  ];
   const linkClasses = [
-    "w-[90px]",
-    "h-[90px]",
-    "block",
-    "bg-no-repeat",
-    "bg-center",
-    "bg-[length:70%]",
-    "transition-colors",
-    "duration-300",
-    "ease-linear",
-    "clip-path-supported-h-100",
-    "clip-hexagon",
-    "hover:bg-yellow-500",
+    'w-[90px]',
+    'h-[90px]',
+    'block',
+    'bg-no-repeat',
+    'bg-center',
+    'bg-[length:70%]',
+    'transition-colors',
+    'duration-300',
+    'ease-linear',
+    'clip-path-supported-h-100',
+    'clip-hexagon',
+    'hover:bg-yellow-500',
   ];
 
   return (
@@ -26,7 +33,7 @@ export const Footer = () => {
         <ul className={twMerge(socialClasses)}>
           <li className="mr-[25px] md:mr-[30px] inline-block">
             <a
-              className={twMerge(linkClasses, "bg-linkedin bg-[length:60%]")}
+              className={twMerge(linkClasses, 'bg-linkedin bg-[length:60%]')}
               target="_blank"
               rel="me noreferrer"
               href="https://uk.linkedin.com/pub/perry-harlock/12/1b7/170"
@@ -37,7 +44,7 @@ export const Footer = () => {
           </li>
           <li className="md:ml-[30px] inline-block">
             <a
-              className={twMerge(linkClasses, "bg-github")}
+              className={twMerge(linkClasses, 'bg-github')}
               target="_blank"
               rel="me noreferrer"
               href="https://github.com/perryharlock"
@@ -47,7 +54,9 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
-        <div className="text-center font-bold">&copy; {new Date().getFullYear()} Perry Harlock</div>
+        <div className="text-center font-bold">
+          &copy; {new Date().getFullYear()} Perry Harlock
+        </div>
       </div>
       <a
         href="#top"

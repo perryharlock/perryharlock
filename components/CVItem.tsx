@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
-import { AnimatedElement } from "./Animated";
+import { twMerge } from 'tailwind-merge';
+import { AnimatedElement } from './Animated';
 
 interface CVItemProps {
   index: number;
@@ -12,12 +12,27 @@ interface CVItemProps {
   isLast?: boolean;
 }
 
-export const CVItem = ({ index, employer, role, date, linkUrl, linkText, description, isLast }: CVItemProps) => {
+export const CVItem = ({
+  index,
+  employer,
+  role,
+  date,
+  linkUrl,
+  linkText,
+  description,
+  isLast,
+}: CVItemProps) => {
   const isEven = (index + 1) % 2 === 0;
   const isFirst = index === 0;
 
   return (
-    <li className={twMerge("relative my-[120px] md:my-[160px]", isFirst && "mt-0 md:mt-0", isLast && "!mb-0")}>
+    <li
+      className={twMerge(
+        'relative my-[120px] md:my-[160px]',
+        isFirst && 'mt-0 md:mt-0',
+        isLast && '!mb-0',
+      )}
+    >
       <div className="container">
         <div className="md:grid md:grid-cols-12 md:gap-4">
           <AnimatedElement
@@ -29,14 +44,16 @@ export const CVItem = ({ index, employer, role, date, linkUrl, linkText, descrip
 
           <AnimatedElement
             animationClass={twMerge(
-              "fade-9-delay-2",
-              isEven ? "md:fade-in-right-11-delay-2" : "md:fade-in-left-11-delay-2"
+              'fade-9-delay-2',
+              isEven
+                ? 'md:fade-in-right-11-delay-2'
+                : 'md:fade-in-left-11-delay-2',
             )}
             classes={twMerge(
               "row-start-1 relative bg-grey-100 py-[45px] px-[15px] text-center md:py-[15px] md:px-[25px] md:text-left before:content-[''] before:top-[24px] before:h-0 before:w-0 before:absolute before:border-8 before:border-transparent",
               isEven
-                ? "md:col-start-7 md:col-span-6 md:ml-10 before:left-[-14px] before:right-auto before:border-r-grey-100"
-                : "md:col-span-6 md:mr-10 before:left-full before:border-l-grey-100"
+                ? 'md:col-start-7 md:col-span-6 md:ml-10 before:left-[-14px] before:right-auto before:border-r-grey-100'
+                : 'md:col-span-6 md:mr-10 before:left-full before:border-l-grey-100',
             )}
           >
             <>
@@ -56,7 +73,10 @@ export const CVItem = ({ index, employer, role, date, linkUrl, linkText, descrip
                 {linkText}
               </a>
               {description.map((desc, i) => (
-                <p key={i} className="mt-[20px] leading-[26px] md:text-[16px] md:leading-[32px]">
+                <p
+                  key={i}
+                  className="mt-[20px] leading-[26px] md:text-[16px] md:leading-[32px]"
+                >
                   {desc}
                 </p>
               ))}
@@ -64,10 +84,14 @@ export const CVItem = ({ index, employer, role, date, linkUrl, linkText, descrip
           </AnimatedElement>
 
           <AnimatedElement
-            animationClass={twMerge(isEven ? "md:fade-in-left-11" : "md:fade-in-right-11")}
+            animationClass={twMerge(
+              isEven ? 'md:fade-in-left-11' : 'md:fade-in-right-11',
+            )}
             classes={twMerge(
-              "row-start-1 mt-[17px] hidden md:block print:hidden",
-              isEven ? "md:col-start-1 md:col-span-6 md:ml-auto md:mr-10 text-right" : "md:col-span-6 md:ml-10"
+              'row-start-1 mt-[17px] hidden md:block print:hidden',
+              isEven
+                ? 'md:col-start-1 md:col-span-6 md:ml-auto md:mr-10 text-right'
+                : 'md:col-span-6 md:ml-10',
             )}
           >
             <>
