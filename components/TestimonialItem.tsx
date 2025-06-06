@@ -58,11 +58,11 @@ export const TestimonialItem = ({ index, text }: TestimonialItemProps) => {
       )}
     >
       <h4 className="text-[16px] font-semibold leading-[2] m-0">
-        {text.map((text, index) => {
-          const isLast = index === text.length - 1;
+        {text.map((textItem, index) => {
+          const isLast = text.length > 0 && index === text.length - 1;
           return (
             <React.Fragment key={index}>
-              {text} {!isLast ? <br /> : null}
+              {textItem} {!isLast ? <br /> : null}
             </React.Fragment>
           );
         })}

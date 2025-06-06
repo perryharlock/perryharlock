@@ -51,6 +51,7 @@ export const Header = () => {
   return (
     <header
       id="top"
+      data-testid="header"
       className="py-[15px] pb-0 md:py-[40px] md:pb-0 bg-blue-500 print:hidden"
     >
       <div className="container-auto md:flex md:justify-between">
@@ -62,6 +63,7 @@ export const Header = () => {
           height="65"
           unoptimized
           loading="eager"
+          data-testid="logo"
         />
 
         <nav className="text-center mt-[30px] md:mt-[10px]">
@@ -69,6 +71,7 @@ export const Header = () => {
             {menuItems.map((item, i) => (
               <li
                 key={item.label}
+                data-testid={`nav-item-${i}`}
                 className={twMerge(
                   'nav__item inline-block pl-[5px] pr-[5px] mx-[5px] md:mx-[20px]',
                   lastItem === i + 1 && 'mr-0 md:mr-0',

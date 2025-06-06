@@ -32,6 +32,7 @@ export const AnimatedElement = ({
   return (
     <Element
       ref={ref}
+      data-testid="animated-element"
       className={twMerge(
         'will-animate', // ensures visible for no-JS users
         classes,
