@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://perryharlock.co.uk/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://perryharlock.co.uk/index.html</loc>
+    <lastmod>2025-06-06</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.perryharlock.co.uk/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-06-06</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.perryharlock.co.uk/index.html</loc>
+    <lastmod>2025-06-06</lastmod>
     <priority>1.0</priority>
   </url>
 </urlset>
