@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Hero } from './Hero';
-const mockUseInView = require('../hooks/useInView').useInView;
+import { useInView } from '../hooks/useInView';
 
 // Mock the useInView hook
 jest.mock('../hooks/useInView', () => ({
@@ -9,6 +9,7 @@ jest.mock('../hooks/useInView', () => ({
 
 describe('Hero', () => {
   const mockRef = { current: null };
+  const mockUseInView = useInView as jest.MockedFunction<typeof useInView>;
   mockUseInView.mockReturnValue({ ref: mockRef, isInView: true });
 
   beforeEach(() => {

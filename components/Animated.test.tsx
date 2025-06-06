@@ -1,61 +1,48 @@
 import { render, screen } from '@testing-library/react';
 import { AnimatedElement } from './Animated';
-const mockUseInView = require('../hooks/useInView').useInView;
+import { useInView } from '../hooks/useInView';
 
 // Mock the useInView hook
 jest.mock('../hooks/useInView', () => ({
   useInView: jest.fn(),
 }));
 
+const mockUseInView = useInView as jest.MockedFunction<typeof useInView>;
+
 describe('AnimatedElement', () => {
   const mockRef = { current: null };
+  mockUseInView.mockReturnValue({ ref: mockRef, isInView: true });
 
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it('renders children correctly', () => {
-    mockUseInView.mockReturnValue({ ref: mockRef, isInView: false });
-
     render(<AnimatedElement>Test content</AnimatedElement>);
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 
   it('renders with default div element', () => {
-    mockUseInView.mockReturnValue({ ref: mockRef, isInView: false });
-
-    const { container } = render(
-      <AnimatedElement>Test content</AnimatedElement>,
-    );
+    render(<AnimatedElement>Test content</AnimatedElement>);
 
     expect(screen.getByTestId('animated-element').nodeName).toBe('DIV');
   });
 
   it('renders with custom element', () => {
-    mockUseInView.mockReturnValue({ ref: mockRef, isInView: false });
-
-    const { container } = render(
-      <AnimatedElement element="section">Test content</AnimatedElement>,
-    );
+    render(<AnimatedElement element="section">Test content</AnimatedElement>);
 
     expect(screen.getByTestId('animated-element').nodeName).toBe('SECTION');
   });
 
   it('applies default animation class when in view', () => {
-    mockUseInView.mockReturnValue({ ref: mockRef, isInView: true });
-
-    const { container } = render(
-      <AnimatedElement>Test content</AnimatedElement>,
-    );
+    render(<AnimatedElement>Test content</AnimatedElement>);
 
     expect(screen.getByTestId('animated-element')).toHaveClass('fade-9');
   });
 
   it('applies custom animation class when in view', () => {
-    mockUseInView.mockReturnValue({ ref: mockRef, isInView: true });
-
-    const { container } = render(
+    render(
       <AnimatedElement animationClass="custom-animation">
         Test content
       </AnimatedElement>,
@@ -69,18 +56,14 @@ describe('AnimatedElement', () => {
   it('does not apply animation class when not in view', () => {
     mockUseInView.mockReturnValue({ ref: mockRef, isInView: false });
 
-    const { container } = render(
-      <AnimatedElement>Test content</AnimatedElement>,
-    );
+    render(<AnimatedElement>Test content</AnimatedElement>);
 
     expect(screen.getByTestId('animated-element')).not.toHaveClass('fade-9');
     expect(screen.getByTestId('animated-element')).toHaveClass('will-animate');
   });
 
   it('applies additional classes', () => {
-    mockUseInView.mockReturnValue({ ref: mockRef, isInView: false });
-
-    const { container } = render(
+    render(
       <AnimatedElement classes="custom-class">Test content</AnimatedElement>,
     );
 
@@ -91,8 +74,6 @@ describe('AnimatedElement', () => {
   });
 
   it('removes no-js class from body on mount', () => {
-    mockUseInView.mockReturnValue({ ref: mockRef, isInView: false });
-
     render(<AnimatedElement>Test content</AnimatedElement>);
 
     expect(document.body).not.toHaveClass('no-js');

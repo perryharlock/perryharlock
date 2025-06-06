@@ -1,18 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { CVItem } from './CVItem';
-const mockUseInView = require('../hooks/useInView').useInView;
+import { useInView } from '../hooks/useInView';
 
 // Mock the useInView hook
 jest.mock('../hooks/useInView', () => ({
   useInView: jest.fn(),
 }));
-
-const mockRef = { current: null };
-mockUseInView.mockReturnValue({ ref: mockRef, isInView: true });
-
-beforeEach(() => {
-  jest.clearAllMocks();
-});
 
 const mockProps = {
   index: 0,
@@ -25,6 +18,13 @@ const mockProps = {
 };
 
 describe('CVItem', () => {
+  const mockRef = { current: null };
+  const mockUseInView = useInView as jest.MockedFunction<typeof useInView>;
+  mockUseInView.mockReturnValue({ ref: mockRef, isInView: true });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
   it('renders all content correctly', () => {
     render(<CVItem {...mockProps} />);
 
