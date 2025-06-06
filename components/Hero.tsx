@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { twMerge } from "tailwind-merge";
-import { AnimatedElement } from "./Animated";
+import Image from 'next/image';
+import { twMerge } from 'tailwind-merge';
+import { AnimatedElement } from './Animated';
 
 export const Hero = () => {
   return (
@@ -11,7 +11,7 @@ export const Hero = () => {
             <AnimatedElement animationClass="fade-9">
               <h1
                 className={twMerge(
-                  "text-[52px] text-white leading-[52px] md:leading-[110px] mb-[30px] pt-[30px] md:text-[110px] md:mb-[70px] md:pt-[70px] lg:mb-[70px] lg:pt-[120px] font-bold"
+                  'text-[52px] text-white leading-[52px] md:leading-[110px] mb-[30px] pt-[30px] md:text-[110px] md:mb-[70px] md:pt-[70px] lg:mb-[70px] lg:pt-[120px] font-bold',
                 )}
               >
                 Hi, I&apos;m <span className="text-yellow-500">Perry</span>
@@ -20,13 +20,17 @@ export const Hero = () => {
 
             <AnimatedElement animationClass="fade-9-delay-2">
               <h2 className="animated font-bold text-white leading-[27px] max-w-[375px] mx-auto md:text-[24px] md:leading-[36px] md:pr-[150px] md:max-w-none lg:pr-[190px] xl:pr-[150px] 2xl:pr-[210px]">
-                I&apos;m a <span className="text-yellow-500">UI Developer</span> working in London. I{" "}
-                <span className="text-yellow-500">design</span> and <span className="text-yellow-500">develop</span> for
-                web and specialise in <span className="text-yellow-500">CSS</span>,{" "}
-                <span className="text-yellow-500">HTML</span> and{" "}
-                <span className="text-yellow-500">Responsive Design.</span> <br />
+                I&apos;m a <span className="text-yellow-500">UI Developer</span>{' '}
+                working in London. I{' '}
+                <span className="text-yellow-500">design</span> and{' '}
+                <span className="text-yellow-500">develop</span> for web and
+                specialise in <span className="text-yellow-500">CSS</span>,{' '}
+                <span className="text-yellow-500">HTML</span> and{' '}
+                <span className="text-yellow-500">Responsive Design.</span>{' '}
                 <br />
-                Did I mention I love <span className="text-yellow-500">CSS</span>?
+                <br />
+                Did I mention I love{' '}
+                <span className="text-yellow-500">CSS</span>?
               </h2>
             </AnimatedElement>
           </div>
