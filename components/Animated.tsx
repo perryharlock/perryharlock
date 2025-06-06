@@ -1,7 +1,7 @@
-"use client";
-import { useInView } from "@/hooks/useInView";
-import { useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
+'use client';
+import { useInView } from '@/hooks/useInView';
+import { useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface AnimatedElementProps {
   animationClass?: string;
@@ -11,16 +11,16 @@ interface AnimatedElementProps {
 }
 
 export const AnimatedElement = ({
-  animationClass = "fade-9",
+  animationClass = 'fade-9',
   classes,
   children,
-  element: Element = "div",
+  element: Element = 'div',
 }: AnimatedElementProps) => {
   const { ref, isInView } = useInView();
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    document.body.classList.remove("no-js");
+    document.body.classList.remove('no-js');
   }, []);
 
   useEffect(() => {
@@ -33,9 +33,9 @@ export const AnimatedElement = ({
     <Element
       ref={ref}
       className={twMerge(
-        "will-animate", // ensures visible for no-JS users
+        'will-animate', // ensures visible for no-JS users
         classes,
-        hasAnimated ? animationClass : ""
+        hasAnimated ? animationClass : '',
       )}
     >
       {children}
