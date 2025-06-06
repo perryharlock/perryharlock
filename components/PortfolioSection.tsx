@@ -65,8 +65,7 @@ const portfolioItems = [
   {
     title: "Caledonian Sleeper",
     description: "Front end development",
-    linkUrl:
-      "https://new.sleeper.scot/?origin=LON&destination=GLA&outDate=2019-12-12&railcards=&males=1&females=0&children=0&pets=0&cycles=0",
+    linkUrl: "https://sleeper.scot",
     linkText: "Visit site",
     skills: ["HTML / CSS / LESS", "React", "Responsive", "Sketch / Photoshop"],
     imageSrc: "/sleeper.webp",
@@ -74,17 +73,17 @@ const portfolioItems = [
     imageWidth: 1162,
     imageHeight: 646,
   },
-  {
-    title: "Planar Network",
-    description: "Front end build",
-    linkUrl: "https://planar.network",
-    linkText: "Visit site",
-    skills: ["HTML / CSS / LESS", "JS / jQuery", "Responsive", "Sketch / Photoshop"],
-    imageSrc: "/planar-network.webp",
-    imageAlt: "Planar Network screenshot on tablet and phone",
-    imageWidth: 1162,
-    imageHeight: 646,
-  },
+  // {
+  //   title: "Planar Network",
+  //   description: "Front end build",
+  //   linkUrl: "https://planar.network",
+  //   linkText: "Visit site",
+  //   skills: ["HTML / CSS / LESS", "JS / jQuery", "Responsive", "Sketch / Photoshop"],
+  //   imageSrc: "/planar-network.webp",
+  //   imageAlt: "Planar Network screenshot on tablet and phone",
+  //   imageWidth: 1162,
+  //   imageHeight: 646,
+  // },
   {
     title: "pa11y.org",
     description: "Core contributor",
