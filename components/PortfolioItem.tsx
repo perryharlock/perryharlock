@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { AnimatedElement } from "./Animated";
+import { Button } from "./Button";
 
 interface PortfolioItemProps {
   index: number;
@@ -74,14 +75,13 @@ export const PortfolioItem = ({
                 {title}
               </h4>
               <h5 className="italic text-[24px] mb-[10px] leading-[24px]">{description}</h5>
-              <a
-                className="text-[16px] font-semibold uppercase no-underline inline-block border-2 border-primary text-blue-500 px-[25px] py-[15px] my-[10px] mt-[10px] mb-[20px] transition-all duration-300 ease-linear hover:bg-blue-500 hover:text-white hover:no-underline md:my-[20px] md:mb-[30px]"
+              <Button
+                classNames="text-[16px] text-blue-500 font-semibold my-[10px] mt-[10px] mb-[20px] md:my-[20px] md:mb-[30px]"
                 href={linkUrl}
                 target="_blank"
                 rel="noreferrer"
-              >
-                {linkText}
-              </a>
+                linkText={linkText}
+              />
               <ul
                 className={twMerge(
                   "text-[16px] leading-[1.5] text-blue-700 uppercase mx-auto mb-[30px] mt-0 lg:m-0 lg:text-[18px]",
