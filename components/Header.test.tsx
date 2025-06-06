@@ -29,9 +29,8 @@ describe('Header', () => {
   it('renders navigation list with correct structure', () => {
     render(<Header />);
 
-    const nav = screen.getByRole('navigation');
-    const list = nav.querySelector('ul');
-    const listItems = nav.querySelectorAll('li');
+    const list = screen.getByTestId('nav-list');
+    const listItems = screen.getAllByRole('listitem');
 
     expect(list).toBeInTheDocument();
     expect(listItems).toHaveLength(4);

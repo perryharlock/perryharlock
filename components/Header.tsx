@@ -67,7 +67,10 @@ export const Header = () => {
         />
 
         <nav className="text-center mt-[30px] md:mt-[10px]">
-          <ul className="pl-0 list-none m-0 md:ml-[-5px]">
+          <ul
+            data-testid="nav-list"
+            className="pl-0 list-none m-0 md:ml-[-5px]"
+          >
             {menuItems.map((item, i) => (
               <li
                 key={item.label}

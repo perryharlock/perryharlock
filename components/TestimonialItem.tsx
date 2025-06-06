@@ -46,6 +46,7 @@ export const TestimonialItem = ({ index, text }: TestimonialItemProps) => {
   return (
     <AnimatedElement
       element="li"
+      testId={`testimonial-item-${index}`}
       animationClass={twMerge(
         'fade-9',
         isEven ? 'md:fade-in-right-11' : 'md:fade-in-left-11-delay-2',

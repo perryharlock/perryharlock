@@ -37,33 +37,29 @@ describe('CVItem', () => {
   });
 
   it('applies correct styling for first item', () => {
-    const { container } = render(<CVItem {...mockProps} index={0} />);
-    const listItem = container.querySelector('li');
+    render(<CVItem {...mockProps} index={0} />);
+    const listItem = screen.getByTestId('cv-item-0');
 
     expect(listItem).toHaveClass('mt-0', 'md:mt-0');
   });
 
   it('applies correct styling for last item', () => {
-    const { container } = render(<CVItem {...mockProps} isLast />);
-    const listItem = container.querySelector('li');
+    render(<CVItem {...mockProps} isLast />);
+    const listItem = screen.getByTestId('cv-item-0');
 
     expect(listItem).toHaveClass('!mb-0');
   });
 
   it('applies odd item styling correctly', () => {
-    const { container } = render(<CVItem {...mockProps} index={1} />);
-
-    const contentElement = container.querySelector('[class*="md:col-start-7"]');
-    expect(contentElement).toBeInTheDocument();
+    render(<CVItem {...mockProps} index={1} />);
+    const content = screen.getByTestId('cv-item-content-1');
+    expect(content).toHaveClass('md:col-start-7');
   });
 
   it('applies even item styling correctly', () => {
-    const { container } = render(<CVItem {...mockProps} index={0} />);
-
-    const contentElement = container.querySelector(
-      '[class*="md:col-span-6"]:not([class*="md:col-start-7"])',
-    );
-    expect(contentElement).toBeInTheDocument();
+    render(<CVItem {...mockProps} index={0} />);
+    const content = screen.getByTestId('cv-item-content-0');
+    expect(content).not.toHaveClass('md:col-start-7');
   });
 
   it('renders external links with correct attributes', () => {
@@ -87,11 +83,9 @@ describe('CVItem', () => {
   });
 
   it('renders diamond indicator element', () => {
-    const { container } = render(<CVItem {...mockProps} />);
+    render(<CVItem {...mockProps} />);
 
-    const diamond = container.querySelector(
-      '.rotate-45.w-\\[50px\\].h-\\[50px\\]',
-    );
+    const diamond = screen.getByTestId('diamond');
     expect(diamond).toBeInTheDocument();
   });
 });

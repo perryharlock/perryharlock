@@ -37,59 +37,66 @@ describe('TestimonialItem', () => {
   });
 
   it('adds line breaks between text segments except for the last one', () => {
-    const { container } = render(<TestimonialItem {...mockProps} />);
+    render(<TestimonialItem {...mockProps} />);
 
-    const h4Element = container.querySelector('h4');
+    const h4Element = screen.getByRole('heading', { level: 4 });
     expect(h4Element).toBeInTheDocument();
 
-    const brElements = container.querySelectorAll('br');
+    // eslint-disable-next-line testing-library/no-node-access
+    const brElements = Array.from(h4Element.children).filter(
+      (el) => el.tagName === 'BR',
+    );
+
     expect(brElements).toHaveLength(2); // Should have 2 br tags for 3 text segments
   });
 
   it('applies correct animation class for odd index (left animation)', () => {
-    const { container } = render(<TestimonialItem index={0} text={['Test']} />);
+    render(<TestimonialItem index={0} text={['Test']} />);
 
-    const listItem = container.firstChild as HTMLElement;
+    const listItem = screen.getByTestId('testimonial-item-0');
     expect(listItem).toHaveClass('md:fade-in-left-11-delay-2');
   });
 
   it('applies correct animation class for even index (right animation)', () => {
-    const { container } = render(<TestimonialItem index={1} text={['Test']} />);
+    render(<TestimonialItem index={1} text={['Test']} />);
 
-    const listItem = container.firstChild as HTMLElement;
+    const listItem = screen.getByTestId('testimonial-item-1');
     expect(listItem).toHaveClass('md:fade-in-right-11');
   });
 
   it('renders as a list item element', () => {
-    const { container } = render(<TestimonialItem {...mockProps} />);
-
-    expect(container.firstChild?.nodeName).toBe('LI');
+    render(<TestimonialItem {...mockProps} />);
+    const listItem = screen.getByTestId('testimonial-item-0');
+    expect(listItem.nodeName).toBe('LI');
   });
 
   it('applies all required CSS classes', () => {
-    const { container } = render(<TestimonialItem {...mockProps} />);
+    render(<TestimonialItem {...mockProps} />);
+    const listItem = screen.getByTestId('testimonial-item-0');
 
-    const listItem = container.firstChild as HTMLElement;
     expect(listItem).toHaveClass('fade-9');
     expect(listItem).toHaveClass('bg-white');
     expect(listItem).toHaveClass('relative');
   });
 
   it('handles single text item without line breaks', () => {
-    const { container } = render(
-      <TestimonialItem index={0} text={['Single line']} />,
+    render(<TestimonialItem index={0} text={['Single line']} />);
+    const listItem = screen.getByTestId('testimonial-item-0');
+    expect(listItem).toHaveTextContent('Single line');
+
+    const h4Element = screen.getByRole('heading', { level: 4 });
+    // eslint-disable-next-line testing-library/no-node-access
+    const brElements = Array.from(h4Element.children).filter(
+      (el) => el.tagName === 'BR',
     );
 
-    expect(screen.getByText('Single line')).toBeInTheDocument();
-
-    const brElements = container.querySelectorAll('br');
     expect(brElements).toHaveLength(0);
   });
 
   it('handles empty text array', () => {
-    const { container } = render(<TestimonialItem index={0} text={[]} />);
+    render(<TestimonialItem index={0} text={[]} />);
 
-    const h4Element = container.querySelector('h4');
+    const h4Element = screen.getByRole('heading', { level: 4 });
     expect(h4Element).toBeInTheDocument();
     expect(h4Element?.textContent).toBe('');
   });

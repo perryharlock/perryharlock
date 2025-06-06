@@ -41,23 +41,23 @@ describe('PortfolioItem', () => {
   });
 
   it('applies first item styles when index is 0', () => {
-    const { container } = render(<PortfolioItem {...mockProps} />);
-    const listItem = container.querySelector('li');
+    render(<PortfolioItem {...mockProps} />);
+    const listItem = screen.getByTestId('portfolio-item-0');
 
     expect(listItem).toHaveClass('pt-[30px]');
   });
 
   it('applies odd item styles to odd position elements', () => {
-    const { container } = render(<PortfolioItem {...mockProps} index={1} />);
-    const listItem = container.querySelector('li');
+    render(<PortfolioItem {...mockProps} index={1} />);
+    const listItem = screen.getByTestId('portfolio-item-1');
 
     expect(listItem).toHaveClass('bg-grey-100');
     expect(listItem).toHaveClass('text-right');
   });
 
   it('applies before content styles when not first item', () => {
-    const { container } = render(<PortfolioItem {...mockProps} index={1} />);
-    const listItem = container.querySelector('li');
+    render(<PortfolioItem {...mockProps} index={1} />);
+    const listItem = screen.getByTestId('portfolio-item-1');
 
     expect(listItem).toHaveClass("before:content-['']");
     expect(listItem).toHaveClass('before:block');

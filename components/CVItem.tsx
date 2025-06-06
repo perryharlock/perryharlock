@@ -32,6 +32,7 @@ export const CVItem = ({
         isFirst && 'mt-0 md:mt-0',
         isLast && '!mb-0',
       )}
+      data-testid={`cv-item-${index}`}
     >
       <div className="container">
         <div className="md:grid md:grid-cols-12 md:gap-4">
@@ -39,10 +40,14 @@ export const CVItem = ({
             animationClass="fade-9-delay-2"
             classes="absolute top-[-24px] left-[50%] -translate-x-1/2 z-10 md:top-[7px]"
           >
-            <span className="inline-block bg-grey-500 rotate-45 w-[50px] h-[50px] border-3 border-white" />
+            <span
+              data-testid="diamond"
+              className="inline-block bg-grey-500 rotate-45 w-[50px] h-[50px] border-3 border-white"
+            />
           </AnimatedElement>
 
           <AnimatedElement
+            testId={`cv-item-content-${index}`}
             animationClass={twMerge(
               'fade-9-delay-2',
               isEven
