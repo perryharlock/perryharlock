@@ -1,34 +1,41 @@
-import type { Metadata } from "next";
-import Script from "next/script";
-import { Source_Sans_3 } from "next/font/google";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import "./globals.css";
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import { Source_Sans_3 } from 'next/font/google';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import './globals.css';
 
 const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
-  subsets: ["latin"],
+  variable: '--font-source-sans',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio of Perry Harlock, UI Developer / Designer in Kent and London",
-  description: "Online portfolio of Perry Harlock, a kent based UI Developer / Designer working in London",
+  title:
+    'Portfolio of Perry Harlock, UI Developer / Designer in Kent and London',
+  description:
+    'Online portfolio of Perry Harlock, a kent based UI Developer / Designer working in London',
   keywords: [
-    "web development",
-    "web developer",
-    "ui designer",
-    "ui developer",
-    "nextjs developer",
-    "react developer",
-    "london",
+    'web development',
+    'web developer',
+    'ui designer',
+    'ui developer',
+    'nextjs developer',
+    'react developer',
+    'london',
   ],
-  applicationName: "Perry Harlock",
+  applicationName: 'Perry Harlock',
+  alternates: {
+    canonical: 'https://www.perryharlock.co.uk',
+  },
   openGraph: {
-    title: "Portfolio of Perry Harlock, UI Developer / Designer in Kent and London",
-    description: "Online portfolio of Perry Harlock, a kent based UI Developer / Designer working in London",
-    url: "https://perryharlock.co.uk",
-    type: "website",
-    images: ["https://www.perryharlock.co.uk/perry.webp"],
+    title:
+      'Portfolio of Perry Harlock, UI Developer / Designer in Kent and London',
+    description:
+      'Online portfolio of Perry Harlock, a kent based UI Developer / Designer working in London',
+    url: 'https://www.perryharlock.co.uk',
+    type: 'website',
+    images: ['https://www.perryharlock.co.uk/perry.webp'],
   },
 };
 
@@ -40,14 +47,22 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="google-site-verification" content="aPkK8uKcFnWxU-hvl-BM8QBPrJNFDYTWLM70o2JTNLk" />
+        <meta
+          name="google-site-verification"
+          content="aPkK8uKcFnWxU-hvl-BM8QBPrJNFDYTWLM70o2JTNLk"
+        />
       </head>
-      <body className={`${sourceSans.variable} antialiased max-w-[1920px] mx-auto no-js`}>
+      <body
+        className={`${sourceSans.variable} antialiased max-w-[1920px] mx-auto no-js`}
+      >
         <Header />
         {children}
         <Footer />
         {/* Load gtag.js from Google Tag Manager */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-M961LTZQ9W" strategy="afterInteractive" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-M961LTZQ9W"
+          strategy="afterInteractive"
+        />
 
         {/* Initialize GA4 */}
         <Script id="gtag-init" strategy="afterInteractive">
